@@ -27,6 +27,7 @@ import {
   X
 } from 'lucide-react';
 import { useState } from 'react';
+import { departments as allDepartments } from '@/data';
 
 export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -78,32 +79,24 @@ export default function LandingPage() {
     }
   ];
 
-  const departments = [
-    {
-      icon: Heart,
-      title: 'Cardiology',
-      description: 'Comprehensive heart care with advanced cardiac procedures',
-      color: 'bg-red-100 text-red-600'
-    },
-    {
-      icon: Brain,
-      title: 'Neurology',
-      description: 'Expert treatment for neurological conditions and disorders',
-      color: 'bg-purple-100 text-purple-600'
-    },
-    {
-      icon: Baby,
-      title: 'Pediatrics',
-      description: 'Specialized care for infants, children, and adolescents',
-      color: 'bg-blue-100 text-blue-600'
-    },
-    {
-      icon: Bone,
-      title: 'Orthopedics',
-      description: 'Advanced treatment for bone, joint, and muscle conditions',
-      color: 'bg-orange-100 text-orange-600'
-    }
-  ];
+  const iconMap: Record<string, any> = {
+    Heart: Heart,
+    Brain: Brain,
+    Bone: Bone,
+    Baby: Baby,
+    Scan: Eye,
+    Ambulance: Ambulance,
+    Activity: Activity,
+  };
+
+  const featuredDepartments = allDepartments.slice(0, 4).map(dept => ({
+    ...dept,
+    icon: iconMap[dept.icon] || Activity,
+    colorClass: dept.color === '#ef4444' ? 'bg-red-100 text-red-600' :
+                dept.color === '#8b5cf6' ? 'bg-purple-100 text-purple-600' :
+                dept.color === '#3b82f6' ? 'bg-blue-100 text-blue-600' :
+                dept.color === '#f97316' ? 'bg-orange-100 text-orange-600' : 'bg-green-100 text-green-600'
+  }));
 
   const whyChooseUs = [
     {
@@ -149,7 +142,7 @@ export default function LandingPage() {
               <Link href="#services" className="text-gray-700 hover:text-green-500 font-medium transition">
                 Services
               </Link>
-              <Link href="#departments" className="text-gray-700 hover:text-green-500 font-medium transition">
+              <Link href="/departments" className="text-gray-700 hover:text-green-500 font-medium transition">
                 Departments
               </Link>
               <Link href="#contact" className="text-gray-700 hover:text-green-500 font-medium transition">
@@ -190,7 +183,7 @@ export default function LandingPage() {
               <Link href="#services" className="block text-gray-700 hover:text-green-500 font-medium">
                 Services
               </Link>
-              <Link href="#departments" className="block text-gray-700 hover:text-green-500 font-medium">
+              <Link href="/departments" className="block text-gray-700 hover:text-green-500 font-medium">
                 Departments
               </Link>
               <Link href="#contact" className="block text-gray-700 hover:text-green-500 font-medium">
@@ -321,7 +314,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Departments</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Medical Specializations</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               World-class specialists across multiple medical departments
             </p>
@@ -334,26 +327,30 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
           >
-            {departments.map((dept, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className="border-2 hover:border-green-500 transition-all hover:shadow-xl h-full group cursor-pointer">
-                  <CardHeader>
-                    <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${dept.color}`}>
-                      <dept.icon className="h-8 w-8" />
-                    </div>
-                    <CardTitle className="text-xl mb-2">{dept.title}</CardTitle>
-                    <CardDescription className="text-base">{dept.description}</CardDescription>
-                  </CardHeader>
-                </Card>
+            {featuredDepartments.map((dept, index) => (
+              <motion.div key={dept.id} variants={fadeInUp}>
+                <Link href={`/department/${dept.slug}`}>
+                  <Card className="border-2 hover:border-green-500 transition-all hover:shadow-xl h-full group cursor-pointer">
+                    <CardHeader>
+                      <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 ${dept.colorClass}`}>
+                        <dept.icon className="h-8 w-8" />
+                      </div>
+                      <CardTitle className="text-xl mb-2 group-hover:text-green-600 transition-colors">{dept.name}</CardTitle>
+                      <CardDescription className="text-base">{dept.description}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </motion.div>
 
           <div className="text-center">
-            <Button size="lg" variant="outline" className="border-green-500 text-green-600 hover:bg-green-50">
-              View All Departments
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/departments">
+              <Button size="lg" variant="outline" className="border-green-500 text-green-600 hover:bg-green-50">
+                View All Departments
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -506,7 +503,7 @@ export default function LandingPage() {
               <ul className="space-y-2 text-gray-400">
                 <li><Link href="/" className="hover:text-green-500 transition">Home</Link></li>
                 <li><Link href="#services" className="hover:text-green-500 transition">Services</Link></li>
-                <li><Link href="#departments" className="hover:text-green-500 transition">Departments</Link></li>
+                <li><Link href="/departments" className="hover:text-green-500 transition">Departments</Link></li>
                 <li><Link href="#contact" className="hover:text-green-500 transition">Contact</Link></li>
               </ul>
             </div>
