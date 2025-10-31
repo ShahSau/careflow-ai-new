@@ -105,28 +105,26 @@ export default function LandingPage() {
     }
   ];
 
-  const stats = [
-    { number: '50K+', label: 'Patients Served' },
-    { number: '200+', label: 'Expert Doctors' },
-    { number: '15+', label: 'Departments' },
-    { number: '98%', label: 'Satisfaction Rate' }
-  ];
-
-  const howItWorks = [
+  const whyChooseUs = [
     {
-      step: '1',
-      title: 'Create Account',
-      description: 'Register as a patient with your basic information'
+      icon: Shield,
+      title: 'Trusted Healthcare',
+      description: 'Accredited and certified medical professionals providing quality care'
     },
     {
-      step: '2',
-      title: 'Book Appointment',
-      description: 'Choose your doctor and preferred time slot'
+      icon: Clock,
+      title: 'Available 24/7',
+      description: 'Round-the-clock emergency services and medical support'
     },
     {
-      step: '3',
-      title: 'Get Treatment',
-      description: 'Visit the hospital and receive quality healthcare'
+      icon: Users,
+      title: 'Expert Team',
+      description: 'Highly qualified doctors and specialists across all departments'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Patient-Centered',
+      description: 'Compassionate care focused on your wellbeing and comfort'
     }
   ];
 
@@ -279,29 +277,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-green-500 text-white py-16">
-        <div className="container mx-auto px-4">
-          <motion.div
-            variants={staggerChildren}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="text-center"
-              >
-                <h3 className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</h3>
-                <p className="text-green-100 text-sm md:text-base">{stat.label}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       <section id="services" className="container mx-auto px-4 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -391,60 +366,126 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose MediCare?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Get started with our simple three-step process
+              Experience excellence in healthcare with our commitment to quality and patient satisfaction
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {howItWorks.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="relative"
-              >
-                <Card className="text-center h-full border-2">
+          <motion.div
+            variants={staggerChildren}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {whyChooseUs.map((item, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="border-2 hover:border-green-500 transition-all hover:shadow-lg h-full text-center">
                   <CardContent className="p-8">
-                    <div className="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
-                      {item.step}
+                    <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                      <item.icon className="h-8 w-8 text-green-600" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{item.description}</p>
                   </CardContent>
                 </Card>
-                {index < howItWorks.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="h-8 w-8 text-green-500" />
-                  </div>
-                )}
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-green-500 to-green-600 rounded-3xl p-12 text-center text-white"
-        >
-          <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">
-            Join thousands of patients who trust MediCare for their healthcare needs
-          </p>
-          <Link href="/register">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-green-600 hover:bg-gray-100">
-              Create Your Account
-              <CheckCircle className="ml-2 h-5 w-5" />
-            </Button>
-          </Link>
-        </motion.div>
+      <section className="bg-gradient-to-br from-green-50 to-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-green-100">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Book Your Appointment Today</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Take the first step towards better health. Our online appointment system makes it easy to schedule consultations with our expert medical team at your convenience.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Choose from available specialists</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Select your preferred time slot</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Receive instant confirmation</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Manage appointments anytime</span>
+                  </li>
+                </ul>
+                <Link href="/register">
+                  <Button size="lg" className="w-full bg-green-500 hover:bg-green-600">
+                    Get Started Now
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <Card className="border-2 border-green-100 hover:border-green-500 transition">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-green-100 p-3 rounded-full">
+                      <Calendar className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl">Easy Scheduling</CardTitle>
+                      <CardDescription>Book appointments in minutes</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-2 border-green-100 hover:border-green-500 transition">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-green-100 p-3 rounded-full">
+                      <Stethoscope className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl">Expert Care</CardTitle>
+                      <CardDescription>Qualified medical professionals</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-2 border-green-100 hover:border-green-500 transition">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-green-100 p-3 rounded-full">
+                      <Activity className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl">Health Tracking</CardTitle>
+                      <CardDescription>Monitor your wellness journey</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       <footer id="contact" className="bg-gray-900 text-white py-12">
