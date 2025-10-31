@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/auth-context';
+import { RoleGuard } from '@/components/role-guard';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -28,17 +29,11 @@ import {
 import Link from 'next/link';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
-export default function PatientPrescriptionsPage() {
+function PatientPrescriptionsPageContent() {
   const { user, logout } = useAuth();
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
-
-  useEffect(() => {
-    if (!user || user.role !== 'patient') {
-      router.push('/login');
-    }
-  }, [user, router]);
 
   if (!user) return null;
 
@@ -406,5 +401,13 @@ export default function PatientPrescriptionsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PatientPrescriptionsPage() {
+  return (
+    <RoleGuard allowedRole="patient">
+      <PatientPrescriptionsPageContent />
+    </RoleGuard>
   );
 }

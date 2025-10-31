@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/auth-context';
+import { RoleGuard } from '@/components/role-guard';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -31,15 +31,9 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-export default function PatientDashboard() {
+function PatientDashboardContent() {
   const { user, logout } = useAuth();
   const router = useRouter();
-
-  useEffect(() => {
-    if (!user || user.role !== 'patient') {
-      router.push('/login');
-    }
-  }, [user, router]);
 
   if (!user) return null;
 
@@ -184,7 +178,7 @@ export default function PatientDashboard() {
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
             <div>
-              <h1 className="text-4xl font-bold mb-2">Welcome back, {user.firstName}!</h1>
+              <h1 className="text-4xl font-bold mb-2">Welcome back, {user.name}!</h1>
               <p className="text-muted-foreground text-lg">Here&apos;s your health overview for today</p>
             </div>
             <div className="flex items-center gap-3">
@@ -204,11 +198,11 @@ export default function PatientDashboard() {
           <div className="flex items-center gap-3 p-4 rounded-lg bg-white dark:bg-gray-900 border">
             <Avatar className="h-16 w-16">
               <AvatarFallback className="text-xl bg-green-100 text-green-700">
-                {user.firstName[0]}{user.lastName[0]}
+                {user.name.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
             </Avatar>
             <div className="flex-1">
-              <h3 className="font-semibold text-lg">{user.firstName} {user.lastName}</h3>
+              <h3 className="font-semibold text-lg">{user.name}</h3>
               <p className="text-sm text-muted-foreground">Patient ID: PT{Math.floor(Math.random() * 100000)}</p>
             </div>
             <Badge className="bg-green-100 text-green-700 border-green-300">Active Patient</Badge>
@@ -508,5 +502,13 @@ export default function PatientDashboard() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function PatientDashboard() {
+  return (
+    <RoleGuard allowedRole="patient">
+      <PatientDashboardContent />
+    </RoleGuard>
   );
 }
