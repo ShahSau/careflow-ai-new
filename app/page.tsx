@@ -156,12 +156,67 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="bg-gray-50 py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative h-full"
+            >
+              <img
+                src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Medical surgery"
+                className="rounded-3xl w-full h-full min-h-[600px] object-cover shadow-2xl"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col justify-between"
+            >
+              <div className="mb-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Proud to be one of the nation's best
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  For 10 years in a row U.S. News & World Report has named us as one of the best public hospitals in the nation.
+                </p>
+                <Link href="/register">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 mt-6">
+                    About us
+                  </Button>
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <img
+                  src="https://images.pexels.com/photos/8376310/pexels-photo-8376310.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Medical team in surgery"
+                  className="rounded-2xl w-full h-48 object-cover shadow-lg"
+                />
+                <img
+                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Operating room"
+                  className="rounded-2xl w-full h-48 object-cover shadow-lg"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <section className="container mx-auto px-6 py-20">
         <div className="mb-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 md:mb-0">Our medical services</h2>
             <Link href="/services">
-              <Button variant="outline" className="border-2">
+              <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
                 View All Services →
               </Button>
             </Link>
@@ -188,50 +243,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Surgery"
-                  className="rounded-2xl w-full h-64 object-cover"
-                />
-                <div className="space-y-4">
-                  <img
-                    src="https://images.pexels.com/photos/8376310/pexels-photo-8376310.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Medical procedure"
-                    className="rounded-2xl w-full h-28 object-cover"
-                  />
-                  <img
-                    src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Operating room"
-                    className="rounded-2xl w-full h-28 object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Proud to be one of the nation's best
-              </h2>
-              <p className="text-lg mb-8 opacity-90">
-                For 10 years in a row U.S. News & World Report has named us as one of the best public hospitals in the nation.
-              </p>
-              <Link href="/register">
-                <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600 text-white px-8">
-                  About us
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="container mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-gray-900 mb-12">Whey choose us</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-12">Why choose us</h2>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {whyChooseUs.map((item, index) => (
