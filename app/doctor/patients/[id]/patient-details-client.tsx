@@ -12,13 +12,18 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Hospital, Bell, ChevronLeft, Pill, TestTube, Calendar, Clock } from 'lucide-react';
+import { Hospital, Bell, ChevronLeft, Pill, TestTube, Calendar, Clock, Activity } from 'lucide-react';
 import Link from 'next/link';
 
 function PatientDetailsContent({ params }: { params: { id: string } }) {
   const { user, logout } = useAuth();
   const [labDialogOpen, setLabDialogOpen] = useState(false);
   const [prescriptionDialogOpen, setPrescriptionDialogOpen] = useState(false);
+  const [vitalsDialogOpen, setVitalsDialogOpen] = useState(false);
+  const [bloodPressure, setBloodPressure] = useState('120/80');
+  const [heartRate, setHeartRate] = useState('72');
+  const [temperature, setTemperature] = useState('98.6');
+  const [bloodSugar, setBloodSugar] = useState('110');
 
   if (!user) return null;
 
@@ -70,6 +75,9 @@ function PatientDetailsContent({ params }: { params: { id: string } }) {
             <h1 className="text-4xl font-bold mb-2">{patient.name}</h1>
             <p className="text-muted-foreground text-lg">Patient ID: {patient.id}</p>
           </div>
+          <Button variant="outline" onClick={() => setVitalsDialogOpen(true)}>
+            <Activity className="h-5 w-5 mr-2" />Update Vitals
+          </Button>
           <Button variant="outline" onClick={() => setLabDialogOpen(true)}>
             <TestTube className="h-5 w-5 mr-2" />Order Lab Test
           </Button>
@@ -243,6 +251,70 @@ function PatientDetailsContent({ params }: { params: { id: string } }) {
               </div>
               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => setPrescriptionDialogOpen(false)}>
                 Create Prescription
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
+
+        <Dialog open={vitalsDialogOpen} onOpenChange={setVitalsDialogOpen}>
+          <DialogContent>
+            <DialogHeader><DialogTitle>Update Patient Vitals</DialogTitle></DialogHeader>
+            <div className="space-y-4">
+              <div>
+                <Label>Patient</Label>
+                <Input value={`${patient.name} (${patient.id})`} disabled />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <Label>Blood Pressure (mmHg)</Label>
+                  <Input
+                    placeholder="120/80"
+                    value={bloodPressure}
+                    onChange={(e) => setBloodPressure(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <Label>Heart Rate (bpm)</Label>
+                  <Input
+                    type="number"
+                    placeholder="72"
+                    value={heartRate}
+                    onChange={(e) => setHeartRate(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <Label>Temperature (°F)</Label>
+                  <Input
+                    type="number"
+                    step="0.1"
+                    placeholder="98.6"
+                    value={temperature}
+                    onChange={(e) => setTemperature(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <Label>Blood Sugar (mg/dL)</Label>
+                  <Input
+                    type="number"
+                    placeholder="110"
+                    value={bloodSugar}
+                    onChange={(e) => setBloodSugar(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div>
+                <Label>Notes</Label>
+                <Textarea placeholder="Additional observations..." />
+              </div>
+              <Button
+                className="w-full bg-green-600 hover:bg-green-700"
+                onClick={() => {
+                  setVitalsDialogOpen(false);
+                }}
+              >
+                Save Vitals
               </Button>
             </div>
           </DialogContent>
