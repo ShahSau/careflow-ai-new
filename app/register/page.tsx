@@ -33,7 +33,7 @@ export default function RegisterPage() {
 
   useEffect(() => {
     if (user) {
-      router.push('/dashboard/patient');
+      router.push('/patient/dashboard');
     }
   }, [user, router]);
 

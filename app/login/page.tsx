@@ -24,13 +24,13 @@ export default function LoginPage() {
     if (user && !user.isFirstLogin) {
       switch (user.role) {
         case 'patient':
-          router.push('/dashboard/patient');
+          router.push('/patient/dashboard');
           break;
         case 'doctor':
-          router.push('/dashboard/doctor');
+          router.push('/doctor/dashboard');
           break;
         case 'admin':
-          router.push('/dashboard/admin');
+          router.push('/admin/dashboard');
           break;
       }
     } else if (user && user.isFirstLogin) {

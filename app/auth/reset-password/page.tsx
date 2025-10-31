@@ -60,7 +60,23 @@ export default function ResetPasswordPage() {
 
     try {
       await resetPassword(newPassword);
-      router.push('/dashboard/doctor');
+
+      // Redirect based on user role
+      if (user) {
+        switch (user.role) {
+          case 'patient':
+            router.push('/patient/dashboard');
+            break;
+          case 'doctor':
+            router.push('/doctor/dashboard');
+            break;
+          case 'admin':
+            router.push('/admin/dashboard');
+            break;
+          default:
+            router.push('/');
+        }
+      }
     } catch (err) {
       setError('Failed to reset password. Please try again.');
       setIsLoading(false);
