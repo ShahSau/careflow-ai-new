@@ -158,18 +158,18 @@ export default function LandingPage() {
 
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+          <div className="grid lg:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative h-full"
+              className="relative"
             >
               <img
-                src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Medical surgery"
-                className="rounded-3xl w-full h-full min-h-[600px] object-cover shadow-2xl"
+                src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Doctor in medical office"
+                className="rounded-3xl w-full h-full object-cover shadow-2xl"
               />
             </motion.div>
 
@@ -178,32 +178,32 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col"
+              className="flex flex-col justify-between"
             >
-              <div className="mb-6">
+              <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                   Proud to be one of the nation's best
                 </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   For 10 years in a row U.S. News & World Report has named us as one of the best public hospitals in the nation.
                 </p>
                 <Link href="/register">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 mt-6">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
                     About us
                   </Button>
                 </Link>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 mt-8">
                 <img
-                  src="https://images.pexels.com/photos/8376310/pexels-photo-8376310.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Medical team in surgery"
-                  className="rounded-2xl w-full h-48 object-cover shadow-lg"
+                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="Medical device"
+                  className="rounded-2xl w-full h-40 object-cover shadow-lg"
                 />
                 <img
                   src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Operating room"
-                  className="rounded-2xl w-full h-48 object-cover shadow-lg"
+                  alt="Stethoscope"
+                  className="rounded-2xl w-full h-40 object-cover shadow-lg"
                 />
               </div>
             </motion.div>
@@ -267,30 +267,50 @@ export default function LandingPage() {
       <section className="container mx-auto px-6 py-20">
         <h2 className="text-4xl font-bold text-gray-900 mb-12">Why choose us</h2>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {whyChooseUs.map((item, index) => (
-            <Card key={index} className="border-2 hover:border-blue-500 transition-all hover:shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-50 p-3 rounded-xl flex-shrink-0">
-                    <item.icon className="h-6 w-6 text-blue-600" />
+        <div className="grid lg:grid-cols-3 gap-8">
+          <div className="space-y-6">
+            {whyChooseUs.slice(0, 2).map((item, index) => (
+              <Card key={index} className="border-2 hover:border-blue-500 transition-all hover:shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-blue-50 p-3 rounded-xl flex-shrink-0">
+                      <item.icon className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                      <p className="text-gray-600">{item.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-600">{item.description}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
 
-        <div className="bg-white rounded-3xl p-8 md:p-12 border-2 border-gray-200">
-          <img
-            src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Medical team"
-            className="rounded-2xl w-full h-64 object-cover mb-8"
-          />
+          <div className="flex items-center">
+            <img
+              src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Medical team"
+              className="rounded-3xl w-full h-full object-cover shadow-xl"
+            />
+          </div>
+
+          <div className="space-y-6">
+            {whyChooseUs.slice(2, 4).map((item, index) => (
+              <Card key={index + 2} className="border-2 hover:border-blue-500 transition-all hover:shadow-lg">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-blue-50 p-3 rounded-xl flex-shrink-0">
+                      <item.icon className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                      <p className="text-gray-600">{item.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
