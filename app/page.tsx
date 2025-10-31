@@ -314,20 +314,29 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
         <div className="container mx-auto px-6">
-          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">Book your appointment today</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              <Input placeholder="Enter your name" className="h-12" />
-              <Input placeholder="Email Address" type="email" className="h-12" />
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Achievements</h2>
+            <p className="text-lg opacity-90">Trusted by thousands for exceptional healthcare</p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">500+</div>
+              <p className="text-lg opacity-90">Expert Doctors</p>
             </div>
-            <div className="mt-6">
-              <Link href="/register">
-                <Button size="lg" className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white px-12 h-12">
-                  Book Appointment
-                </Button>
-              </Link>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">50K+</div>
+              <p className="text-lg opacity-90">Happy Patients</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">20+</div>
+              <p className="text-lg opacity-90">Years Experience</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold mb-2">100+</div>
+              <p className="text-lg opacity-90">Awards Won</p>
             </div>
           </div>
         </div>
