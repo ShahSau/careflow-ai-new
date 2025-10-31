@@ -1,22 +1,16 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heart, Users, Stethoscope, Calendar, Settings, LogOut } from 'lucide-react';
 import { useAuth } from '@/lib/auth-context';
+import { RoleGuard } from '@/components/role-guard';
 
-export default function AdminDashboard() {
+function AdminDashboardContent() {
   const router = useRouter();
   const { user, logout } = useAuth();
-
-  useEffect(() => {
-    if (!user || user.role !== 'admin') {
-      router.push('/login');
-    }
-  }, [user, router]);
 
   const handleLogout = () => {
     logout();
@@ -102,5 +96,13 @@ export default function AdminDashboard() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function AdminDashboard() {
+  return (
+    <RoleGuard allowedRole="admin">
+      <AdminDashboardContent />
+    </RoleGuard>
   );
 }

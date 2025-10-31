@@ -1,22 +1,16 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heart, Calendar, Users, Clock, LogOut } from 'lucide-react';
 import { useAuth } from '@/lib/auth-context';
+import { RoleGuard } from '@/components/role-guard';
 
-export default function DoctorDashboard() {
+function DoctorDashboardContent() {
   const router = useRouter();
   const { user, logout } = useAuth();
-
-  useEffect(() => {
-    if (!user || user.role !== 'doctor') {
-      router.push('/login');
-    }
-  }, [user, router]);
 
   const handleLogout = () => {
     logout();
@@ -90,5 +84,13 @@ export default function DoctorDashboard() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function DoctorDashboard() {
+  return (
+    <RoleGuard allowedRole="doctor">
+      <DoctorDashboardContent />
+    </RoleGuard>
   );
 }
