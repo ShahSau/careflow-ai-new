@@ -139,13 +139,13 @@ export default function LandingPage() {
               <Link href="/" className="text-gray-700 hover:text-green-500 font-medium transition">
                 Home
               </Link>
-              <Link href="#services" className="text-gray-700 hover:text-green-500 font-medium transition">
+              <Link href="/services" className="text-gray-700 hover:text-green-500 font-medium transition">
                 Services
               </Link>
               <Link href="/departments" className="text-gray-700 hover:text-green-500 font-medium transition">
                 Departments
               </Link>
-              <Link href="#contact" className="text-gray-700 hover:text-green-500 font-medium transition">
+              <Link href="/contact" className="text-gray-700 hover:text-green-500 font-medium transition">
                 Contact
               </Link>
             </div>
@@ -180,13 +180,13 @@ export default function LandingPage() {
               <Link href="/" className="block text-gray-700 hover:text-green-500 font-medium">
                 Home
               </Link>
-              <Link href="#services" className="block text-gray-700 hover:text-green-500 font-medium">
+              <Link href="/services" className="block text-gray-700 hover:text-green-500 font-medium">
                 Services
               </Link>
               <Link href="/departments" className="block text-gray-700 hover:text-green-500 font-medium">
                 Departments
               </Link>
-              <Link href="#contact" className="block text-gray-700 hover:text-green-500 font-medium">
+              <Link href="/contact" className="block text-gray-700 hover:text-green-500 font-medium">
                 Contact
               </Link>
               <div className="pt-2 space-y-2">
@@ -502,9 +502,9 @@ export default function LandingPage() {
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-400">
                 <li><Link href="/" className="hover:text-green-500 transition">Home</Link></li>
-                <li><Link href="#services" className="hover:text-green-500 transition">Services</Link></li>
+                <li><Link href="/services" className="hover:text-green-500 transition">Services</Link></li>
                 <li><Link href="/departments" className="hover:text-green-500 transition">Departments</Link></li>
-                <li><Link href="#contact" className="hover:text-green-500 transition">Contact</Link></li>
+                <li><Link href="/contact" className="hover:text-green-500 transition">Contact</Link></li>
               </ul>
             </div>
 

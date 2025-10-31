@@ -28,13 +28,13 @@ export function Navbar() {
             <Link href="/" className="text-gray-700 hover:text-green-500 font-medium transition">
               Home
             </Link>
-            <Link href="/#services" className="text-gray-700 hover:text-green-500 font-medium transition">
+            <Link href="/services" className="text-gray-700 hover:text-green-500 font-medium transition">
               Services
             </Link>
             <Link href="/departments" className="text-gray-700 hover:text-green-500 font-medium transition">
               Departments
             </Link>
-            <Link href="/#contact" className="text-gray-700 hover:text-green-500 font-medium transition">
+            <Link href="/contact" className="text-gray-700 hover:text-green-500 font-medium transition">
               Contact
             </Link>
           </div>
@@ -69,13 +69,13 @@ export function Navbar() {
             <Link href="/" className="block text-gray-700 hover:text-green-500 font-medium">
               Home
             </Link>
-            <Link href="/#services" className="block text-gray-700 hover:text-green-500 font-medium">
+            <Link href="/services" className="block text-gray-700 hover:text-green-500 font-medium">
               Services
             </Link>
             <Link href="/departments" className="block text-gray-700 hover:text-green-500 font-medium">
               Departments
             </Link>
-            <Link href="/#contact" className="block text-gray-700 hover:text-green-500 font-medium">
+            <Link href="/contact" className="block text-gray-700 hover:text-green-500 font-medium">
               Contact
             </Link>
             <div className="pt-2 space-y-2">
