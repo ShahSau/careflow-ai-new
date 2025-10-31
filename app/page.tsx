@@ -178,9 +178,9 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col justify-between"
+              className="flex flex-col"
             >
-              <div className="mb-8">
+              <div className="mb-6">
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                   Proud to be one of the nation's best
                 </h2>
@@ -223,23 +223,44 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <Card key={index} className="border-2 hover:border-blue-500 transition-all hover:shadow-lg group">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-gray-900">{service.name}</h3>
-                  <div className="bg-blue-50 p-3 rounded-xl group-hover:bg-blue-500 transition">
-                    <service.icon className="h-6 w-6 text-blue-600 group-hover:text-white" />
+        <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            {services.slice(0, 2).map((service, index) => (
+              <Card key={index} className="border-2 hover:border-blue-500 transition-all hover:shadow-lg group">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-gray-900">{service.name}</h3>
+                    <div className="bg-blue-50 p-3 rounded-xl group-hover:bg-blue-500 transition">
+                      <service.icon className="h-6 w-6 text-blue-600 group-hover:text-white" />
+                    </div>
                   </div>
-                </div>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <Button variant="ghost" className="text-blue-600 px-0 hover:bg-transparent">
-                  Book more →
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <Button variant="ghost" className="text-blue-600 px-0 hover:bg-transparent">
+                    Book more →
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.slice(2, 5).map((service, index) => (
+              <Card key={index + 2} className="border-2 hover:border-blue-500 transition-all hover:shadow-lg group">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-gray-900">{service.name}</h3>
+                    <div className="bg-blue-50 p-3 rounded-xl group-hover:bg-blue-500 transition">
+                      <service.icon className="h-6 w-6 text-blue-600 group-hover:text-white" />
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <Button variant="ghost" className="text-blue-600 px-0 hover:bg-transparent">
+                    Book more →
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
