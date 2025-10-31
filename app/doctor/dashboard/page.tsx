@@ -318,6 +318,16 @@ function DoctorDashboardContent() {
                         <Link href={`/doctor/patients/${appointment.patientId}`}>
                           <Button size="sm" variant="outline">View Patient</Button>
                         </Link>
+                        {appointment.status === 'upcoming' && (
+                          <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                            Confirm Appointment
+                          </Button>
+                        )}
+                        {appointment.status === 'confirmed' && (
+                          <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                            Start Consultation
+                          </Button>
+                        )}
                         {appointment.status === 'waiting' && (
                           <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
                             Start Consultation
