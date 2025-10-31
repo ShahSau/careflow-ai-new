@@ -466,6 +466,12 @@ function DoctorDashboardContent() {
                 <CardDescription>Common tasks and actions</CardDescription>
               </CardHeader>
               <CardContent className="grid grid-cols-2 gap-3">
+                <Link href="/doctor/appointments">
+                  <Button variant="outline" className="w-full h-20 flex flex-col gap-2">
+                    <CalendarClock className="h-6 w-6" />
+                    <span className="text-sm">Appointments</span>
+                  </Button>
+                </Link>
                 <Link href="/doctor/patients">
                   <Button variant="outline" className="w-full h-20 flex flex-col gap-2">
                     <Users className="h-6 w-6" />
@@ -482,12 +488,6 @@ function DoctorDashboardContent() {
                   <Button variant="outline" className="w-full h-20 flex flex-col gap-2">
                     <Pill className="h-6 w-6" />
                     <span className="text-sm">Prescriptions</span>
-                  </Button>
-                </Link>
-                <Link href="/doctor/schedule">
-                  <Button variant="outline" className="w-full h-20 flex flex-col gap-2">
-                    <Calendar className="h-6 w-6" />
-                    <span className="text-sm">My Schedule</span>
                   </Button>
                 </Link>
               </CardContent>
