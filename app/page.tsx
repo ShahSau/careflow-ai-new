@@ -56,14 +56,16 @@ export default function LandingPage() {
             <div className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition">Home</Link>
               <Link href="/services" className="text-gray-700 hover:text-blue-600 font-medium transition">Service</Link>
-              <Link href="/departments" className="text-gray-700 hover:text-blue-600 font-medium transition">About us</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition">Find a Doctor</Link>
+              <Link href="/departments" className="text-gray-700 hover:text-blue-600 font-medium transition">Departments</Link>
               <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition">Contact</Link>
             </div>
 
-            <div className="hidden md:flex">
+            <div className="hidden md:flex items-center space-x-4">
+              <Link href="/login">
+                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-6">Sign in</Button>
+              </Link>
               <Link href="/register">
-                <Button className="bg-gray-900 hover:bg-gray-800 text-white px-6">Sign up</Button>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6">Sign up</Button>
               </Link>
             </div>
 
@@ -76,9 +78,10 @@ export default function LandingPage() {
             <div className="md:hidden pb-4 space-y-3">
               <Link href="/" className="block text-gray-700">Home</Link>
               <Link href="/services" className="block text-gray-700">Service</Link>
-              <Link href="/departments" className="block text-gray-700">About us</Link>
+              <Link href="/departments" className="block text-gray-700">Departments</Link>
               <Link href="/contact" className="block text-gray-700">Contact</Link>
-              <Link href="/register"><Button className="w-full">Sign up</Button></Link>
+              <Link href="/login"><Button variant="outline" className="w-full border-blue-600 text-blue-600">Sign in</Button></Link>
+              <Link href="/register"><Button className="w-full bg-blue-600 hover:bg-blue-700">Sign up</Button></Link>
             </div>
           )}
         </div>
@@ -131,7 +134,7 @@ export default function LandingPage() {
                           </div>
                         </div>
                         <div className="mt-2 flex items-center space-x-2">
-                          <div className="bg-green-500 px-2 py-1 rounded text-xs text-white">Online</div>
+                          <div className="bg-blue-500 px-2 py-1 rounded text-xs text-white">Online</div>
                           <div className="bg-blue-100 px-2 py-1 rounded-full flex items-center space-x-1">
                             <div className="w-1 h-1 bg-blue-600 rounded-full"></div>
                             <div className="w-1 h-1 bg-blue-600 rounded-full"></div>
