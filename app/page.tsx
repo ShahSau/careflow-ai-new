@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import {
   Heart,
@@ -16,7 +16,9 @@ import {
   Star,
   ArrowRight,
   Menu,
-  X
+  X,
+  CheckCircle,
+  Calendar
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -314,30 +316,94 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Achievements</h2>
-            <p className="text-lg opacity-90">Trusted by thousands for exceptional healthcare</p>
-          </div>
+      <section className="bg-gradient-to-br from-green-50 to-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-green-100">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Book Your Appointment Today</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Take the first step towards better health. Our online appointment system makes it easy to schedule consultations with our expert medical team at your convenience.
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Choose from available specialists</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Select your preferred time slot</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Receive instant confirmation</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700">Manage appointments anytime</span>
+                  </li>
+                </ul>
+                <Link href="/register">
+                  <Button size="lg" className="w-full bg-green-500 hover:bg-green-600">
+                    Get Started Now
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">500+</div>
-              <p className="text-lg opacity-90">Expert Doctors</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">50K+</div>
-              <p className="text-lg opacity-90">Happy Patients</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">20+</div>
-              <p className="text-lg opacity-90">Years Experience</p>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">100+</div>
-              <p className="text-lg opacity-90">Awards Won</p>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <Card className="border-2 border-green-100 hover:border-green-500 transition">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-green-100 p-3 rounded-full">
+                      <Calendar className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl">Easy Scheduling</CardTitle>
+                      <CardDescription>Book appointments in minutes</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-2 border-green-100 hover:border-green-500 transition">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-green-100 p-3 rounded-full">
+                      <Stethoscope className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl">Expert Care</CardTitle>
+                      <CardDescription>Qualified medical professionals</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+
+              <Card className="border-2 border-green-100 hover:border-green-500 transition">
+                <CardHeader>
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-green-100 p-3 rounded-full">
+                      <Activity className="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl">Health Tracking</CardTitle>
+                      <CardDescription>Monitor your wellness journey</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </section>
