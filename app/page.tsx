@@ -86,56 +86,66 @@ export default function LandingPage() {
 
       <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-6 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
+              className="lg:col-span-2 space-y-6"
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                We follow a <span className="inline-flex items-center"><Heart className="h-12 w-12 text-cyan-300 mx-2" /></span> holistic approach to <span className="text-purple-300">health care.</span>
-              </h1>
-              <Link href="/register">
-                <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600 text-white px-8 py-6 text-lg mt-6">
-                  Make an Appointment →
-                </Button>
-              </Link>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                  We follow a <span className="inline-flex items-center"><Heart className="h-10 w-10 text-cyan-300 mx-2" /></span> holistic approach to <span className="text-purple-300">health care.</span>
+                </h1>
+                <Link href="/register">
+                  <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600 text-white px-8 py-4 text-lg">
+                    Make an Appointment →
+                  </Button>
+                </Link>
+              </div>
 
-              <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="flex items-center justify-between mb-4">
-                  <p className="text-sm">Take the discount for the first visit of ophthalmologist</p>
-                  <div className="bg-white/20 p-2 rounded-lg">
-                    <span className="text-xs">→</span>
+              <div className="grid grid-cols-3 gap-6">
+                <div className="col-span-2 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="flex items-center justify-between mb-4">
+                    <p className="text-sm">Take the discount for the first visit of ophthalmologist</p>
+                    <div className="bg-white/20 p-2 rounded-lg">
+                      <span className="text-xs">→</span>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-5xl font-bold mb-1">20%</div>
-                    <div className="bg-gray-900 text-white px-3 py-1 rounded-full text-xs inline-block">$</div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-10 h-10 bg-purple-300 rounded-full"></div>
-                        <div>
-                          <p className="text-xs font-semibold">Dr. Darlene Robin</p>
-                          <p className="text-xs opacity-80">Dental Specialist</p>
-                          <div className="flex items-center mt-1">
-                            <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-                            <span className="text-xs ml-1">5.0 • 50+ reviews</span>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-5xl font-bold mb-1">20%</div>
+                      <div className="bg-gray-900 text-white px-3 py-1 rounded-full text-xs inline-block">$</div>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-10 h-10 bg-purple-300 rounded-full"></div>
+                          <div>
+                            <p className="text-xs font-semibold">Dr. Darlene Robin</p>
+                            <p className="text-xs opacity-80">Dental Specialist</p>
+                            <div className="flex items-center mt-1">
+                              <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                              <span className="text-xs ml-1">5.0 • 50+ reviews</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="mt-2 flex items-center space-x-2">
-                        <div className="bg-green-500 px-2 py-1 rounded text-xs">Online</div>
-                        <div className="bg-white/30 px-2 py-1 rounded-full flex items-center space-x-1">
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                        <div className="mt-2 flex items-center space-x-2">
+                          <div className="bg-green-500 px-2 py-1 rounded text-xs">Online</div>
+                          <div className="bg-white/30 px-2 py-1 rounded-full flex items-center space-x-1">
+                            <div className="w-1 h-1 bg-white rounded-full"></div>
+                            <div className="w-1 h-1 bg-white rounded-full"></div>
+                            <div className="w-1 h-1 bg-white rounded-full"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 flex flex-col justify-center items-center">
+                  <div className="text-4xl font-bold mb-2">500+</div>
+                  <p className="text-sm text-center opacity-90">Expert Doctors</p>
                 </div>
               </div>
             </motion.div>
@@ -146,11 +156,11 @@ export default function LandingPage() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 h-full">
                 <img
                   src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Doctor with patient"
-                  className="rounded-2xl w-full h-[500px] object-cover"
+                  className="rounded-xl w-full h-full object-cover"
                 />
               </div>
             </motion.div>
