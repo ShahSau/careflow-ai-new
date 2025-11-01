@@ -472,7 +472,7 @@ function PatientDashboardContent() {
           animate="animate"
           className="mt-6"
         >
-          <Card className="border-2 border-blue-500 bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
+          <Card className="border-2 border-blue-500 bg-gradient-to-br from-blue-50 to-blue-500 dark:from-gray-800 dark:to-gray-900">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
