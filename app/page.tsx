@@ -84,7 +84,7 @@ export default function LandingPage() {
         </div>
       </nav>
 
-      <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+      <section className="bg-white">
         <div className="container mx-auto px-6 py-20">
           <div className="grid lg:grid-cols-3 gap-8">
             <motion.div
@@ -93,37 +93,37 @@ export default function LandingPage() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-2 space-y-6"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                  We follow a <span className="inline-flex items-center"><Heart className="h-10 w-10 text-cyan-300 mx-2" /></span> holistic approach to <span className="text-purple-300">health care.</span>
+              <div className="bg-blue-50 rounded-2xl p-8 border-2 border-blue-100">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
+                  We follow a <span className="inline-flex items-center"><Heart className="h-10 w-10 text-blue-500 mx-2" /></span> holistic approach to <span className="text-blue-600">health care.</span>
                 </h1>
                 <Link href="/register">
-                  <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600 text-white px-8 py-4 text-lg">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
                     Make an Appointment →
                   </Button>
                 </Link>
               </div>
 
               <div className="grid grid-cols-3 gap-6">
-                <div className="col-span-2 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <div className="col-span-2 bg-white rounded-2xl p-6 border-2 border-blue-100 shadow-md">
                   <div className="flex items-center justify-between mb-4">
-                    <p className="text-sm">Take the discount for the first visit of ophthalmologist</p>
-                    <div className="bg-white/20 p-2 rounded-lg">
-                      <span className="text-xs">→</span>
+                    <p className="text-sm text-gray-700">Take the discount for the first visit of ophthalmologist</p>
+                    <div className="bg-blue-100 p-2 rounded-lg">
+                      <span className="text-xs text-blue-600">→</span>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-5xl font-bold mb-1">20%</div>
-                      <div className="bg-gray-900 text-white px-3 py-1 rounded-full text-xs inline-block">$</div>
+                      <div className="text-5xl font-bold mb-1 text-gray-900">20%</div>
+                      <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs inline-block">$</div>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3">
+                      <div className="bg-blue-50 rounded-lg p-3">
                         <div className="flex items-center space-x-2">
-                          <div className="w-10 h-10 bg-purple-300 rounded-full"></div>
+                          <div className="w-10 h-10 bg-blue-300 rounded-full"></div>
                           <div>
-                            <p className="text-xs font-semibold">Dr. Darlene Robin</p>
-                            <p className="text-xs opacity-80">Dental Specialist</p>
+                            <p className="text-xs font-semibold text-gray-900">Dr. Darlene Robin</p>
+                            <p className="text-xs text-gray-600">Dental Specialist</p>
                             <div className="flex items-center mt-1">
                               <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                               <span className="text-xs ml-1">5.0 • 50+ reviews</span>
@@ -131,11 +131,11 @@ export default function LandingPage() {
                           </div>
                         </div>
                         <div className="mt-2 flex items-center space-x-2">
-                          <div className="bg-green-500 px-2 py-1 rounded text-xs">Online</div>
-                          <div className="bg-white/30 px-2 py-1 rounded-full flex items-center space-x-1">
-                            <div className="w-1 h-1 bg-white rounded-full"></div>
-                            <div className="w-1 h-1 bg-white rounded-full"></div>
-                            <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="bg-green-500 px-2 py-1 rounded text-xs text-white">Online</div>
+                          <div className="bg-blue-100 px-2 py-1 rounded-full flex items-center space-x-1">
+                            <div className="w-1 h-1 bg-blue-600 rounded-full"></div>
+                            <div className="w-1 h-1 bg-blue-600 rounded-full"></div>
+                            <div className="w-1 h-1 bg-blue-600 rounded-full"></div>
                           </div>
                         </div>
                       </div>
@@ -143,9 +143,9 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 flex flex-col justify-center items-center">
-                  <div className="text-4xl font-bold mb-2">500+</div>
-                  <p className="text-sm text-center opacity-90">Expert Doctors</p>
+                <div className="bg-blue-600 rounded-2xl p-6 flex flex-col justify-center items-center shadow-md">
+                  <div className="text-4xl font-bold mb-2 text-white">500+</div>
+                  <p className="text-sm text-center text-white">Expert Doctors</p>
                 </div>
               </div>
             </motion.div>
@@ -156,7 +156,7 @@ export default function LandingPage() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 h-full">
+              <div className="bg-white rounded-2xl p-6 border-2 border-blue-100 shadow-md h-full">
                 <img
                   src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Doctor with patient"
@@ -326,7 +326,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-green-50 to-white py-20">
+      <section className="bg-gradient-to-br from-blue-50 to-white py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -334,31 +334,31 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-green-100">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-blue-100">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Book Your Appointment Today</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Take the first step towards better health. Our online appointment system makes it easy to schedule consultations with our expert medical team at your convenience.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-blue-500 flex-shrink-0" />
                     <span className="text-gray-700">Choose from available specialists</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-blue-500 flex-shrink-0" />
                     <span className="text-gray-700">Select your preferred time slot</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-blue-500 flex-shrink-0" />
                     <span className="text-gray-700">Receive instant confirmation</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-blue-500 flex-shrink-0" />
                     <span className="text-gray-700">Manage appointments anytime</span>
                   </li>
                 </ul>
                 <Link href="/register">
-                  <Button size="lg" className="w-full bg-green-500 hover:bg-green-600">
+                  <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
                     Get Started Now
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -372,11 +372,11 @@ export default function LandingPage() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <Card className="border-2 border-green-100 hover:border-green-500 transition">
+              <Card className="border-2 border-blue-100 hover:border-blue-500 transition">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className="bg-green-100 p-3 rounded-full">
-                      <Calendar className="h-6 w-6 text-green-600" />
+                    <div className="bg-blue-100 p-3 rounded-full">
+                      <Calendar className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
                       <CardTitle className="text-xl">Easy Scheduling</CardTitle>
@@ -386,11 +386,11 @@ export default function LandingPage() {
                 </CardHeader>
               </Card>
 
-              <Card className="border-2 border-green-100 hover:border-green-500 transition">
+              <Card className="border-2 border-blue-100 hover:border-blue-500 transition">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className="bg-green-100 p-3 rounded-full">
-                      <Stethoscope className="h-6 w-6 text-green-600" />
+                    <div className="bg-blue-100 p-3 rounded-full">
+                      <Stethoscope className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
                       <CardTitle className="text-xl">Expert Care</CardTitle>
@@ -400,11 +400,11 @@ export default function LandingPage() {
                 </CardHeader>
               </Card>
 
-              <Card className="border-2 border-green-100 hover:border-green-500 transition">
+              <Card className="border-2 border-blue-100 hover:border-blue-500 transition">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className="bg-green-100 p-3 rounded-full">
-                      <Activity className="h-6 w-6 text-green-600" />
+                    <div className="bg-blue-100 p-3 rounded-full">
+                      <Activity className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
                       <CardTitle className="text-xl">Health Tracking</CardTitle>
