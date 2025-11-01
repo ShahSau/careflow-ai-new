@@ -19,22 +19,22 @@ export function Navbar() {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-2 cursor-pointer"
             >
-              <Heart className="h-8 w-8 text-green-500 fill-green-500" />
+              <Heart className="h-8 w-8 text-blue-500 fill-blue-500" />
               <span className="text-2xl font-bold text-gray-900">MediCare</span>
             </motion.div>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-green-500 font-medium transition">
+            <Link href="/" className="text-gray-700 hover:text-blue-500 font-medium transition">
               Home
             </Link>
-            <Link href="/services" className="text-gray-700 hover:text-green-500 font-medium transition">
+            <Link href="/services" className="text-gray-700 hover:text-blue-500 font-medium transition">
               Services
             </Link>
-            <Link href="/departments" className="text-gray-700 hover:text-green-500 font-medium transition">
+            <Link href="/departments" className="text-gray-700 hover:text-blue-500 font-medium transition">
               Departments
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-green-500 font-medium transition">
+            <Link href="/contact" className="text-gray-700 hover:text-blue-500 font-medium transition">
               Contact
             </Link>
           </div>
@@ -48,7 +48,7 @@ export function Navbar() {
               <Button variant="ghost" size="lg">Login</Button>
             </Link>
             <Link href="/register">
-              <Button size="lg" className="bg-green-500 hover:bg-green-600">Get Started</Button>
+              <Button size="lg" className="bg-blue-500 hover:bg-blue-600">Get Started</Button>
             </Link>
           </motion.div>
 
@@ -66,16 +66,16 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden pb-4 space-y-3"
           >
-            <Link href="/" className="block text-gray-700 hover:text-green-500 font-medium">
+            <Link href="/" className="block text-gray-700 hover:text-blue-500 font-medium">
               Home
             </Link>
-            <Link href="/services" className="block text-gray-700 hover:text-green-500 font-medium">
+            <Link href="/services" className="block text-gray-700 hover:text-blue-500 font-medium">
               Services
             </Link>
-            <Link href="/departments" className="block text-gray-700 hover:text-green-500 font-medium">
+            <Link href="/departments" className="block text-gray-700 hover:text-blue-500 font-medium">
               Departments
             </Link>
-            <Link href="/contact" className="block text-gray-700 hover:text-green-500 font-medium">
+            <Link href="/contact" className="block text-gray-700 hover:text-blue-500 font-medium">
               Contact
             </Link>
             <div className="pt-2 space-y-2">
@@ -83,7 +83,7 @@ export function Navbar() {
                 <Button variant="ghost" size="lg" className="w-full">Login</Button>
               </Link>
               <Link href="/register" className="block">
-                <Button size="lg" className="w-full bg-green-500 hover:bg-green-600">Get Started</Button>
+                <Button size="lg" className="w-full bg-blue-500 hover:bg-blue-600">Get Started</Button>
               </Link>
             </div>
           </motion.div>
