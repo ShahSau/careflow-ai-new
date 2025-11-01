@@ -107,21 +107,21 @@ export default function LandingPage() {
                 </Link>
               </div>
 
-              <div className="grid grid-cols-3 gap-6">
-                <div className="col-span-2 bg-white rounded-2xl p-6 border-2 border-blue-100 shadow-md">
-                  <div className="flex items-center justify-between mb-4">
-                    <p className="text-sm text-gray-700">Take the discount for the first visit of ophthalmologist</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="sm:col-span-2 bg-white rounded-2xl p-4 sm:p-6 border-2 border-blue-100 shadow-md">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-2">
+                    <p className="text-xs sm:text-sm text-gray-700">Take the discount for the first visit of ophthalmologist</p>
                     <div className="bg-blue-100 p-2 rounded-lg">
                       <span className="text-xs text-blue-600">→</span>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                     <div>
-                      <div className="text-5xl font-bold mb-1 text-gray-900">20%</div>
+                      <div className="text-4xl sm:text-5xl font-bold mb-1 text-gray-900">20%</div>
                       <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs inline-block">$</div>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="bg-blue-50 rounded-lg p-3">
+                      <div className="bg-blue-50 rounded-lg p-2 sm:p-3 w-full sm:w-auto">
                         <div className="flex items-center space-x-2">
                           <div className="w-10 h-10 bg-blue-300 rounded-full"></div>
                           <div>
@@ -146,8 +146,8 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-600 rounded-2xl p-6 flex flex-col justify-center items-center shadow-md">
-                  <div className="text-4xl font-bold mb-2 text-white">500+</div>
+                <div className="bg-blue-600 rounded-2xl p-4 sm:p-6 flex flex-col justify-center items-center shadow-md">
+                  <div className="text-3xl sm:text-4xl font-bold mb-2 text-white">500+</div>
                   <p className="text-sm text-center text-white">Expert Doctors</p>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function LandingPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative"
+              className="relative hidden lg:block"
             >
               <div className="bg-white rounded-2xl p-6 border-2 border-blue-100 shadow-md h-full">
                 <img

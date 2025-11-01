@@ -34,7 +34,7 @@ function BillingManagementContent() {
         </div>
         <Card className="border-2">
           <CardContent className="pt-6">
-            <Table>
+            <div className="overflow-x-auto"><Table>
               <TableHeader><TableRow><TableHead>Bill ID</TableHead><TableHead>Patient</TableHead><TableHead>Amount</TableHead><TableHead>Date</TableHead><TableHead>Status</TableHead><TableHead>Actions</TableHead></TableRow></TableHeader>
               <TableBody>
                 {bills.map((bill) => (
@@ -48,7 +48,7 @@ function BillingManagementContent() {
                   </TableRow>
                 ))}
               </TableBody>
-            </Table>
+            </Table></div>
           </CardContent>
         </Card>
       </div>

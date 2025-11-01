@@ -42,7 +42,7 @@ function DoctorManagementContent() {
             <div className="relative"><Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" /><Input placeholder="Search doctors..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10" /></div>
           </CardHeader>
           <CardContent>
-            <Table>
+            <div className="overflow-x-auto"><Table>
               <TableHeader><TableRow><TableHead>ID</TableHead><TableHead>Name</TableHead><TableHead>Specialty</TableHead><TableHead>Phone</TableHead><TableHead>Status</TableHead><TableHead>Actions</TableHead></TableRow></TableHeader>
               <TableBody>
                 {filtered.map((doctor) => (
@@ -56,7 +56,7 @@ function DoctorManagementContent() {
                   </TableRow>
                 ))}
               </TableBody>
-            </Table>
+            </Table></div>
           </CardContent>
         </Card>
       </div>

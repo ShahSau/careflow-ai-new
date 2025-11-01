@@ -33,7 +33,7 @@ function StaffManagementContent() {
         </div>
         <Card className="border-2">
           <CardContent className="pt-6">
-            <Table>
+            <div className="overflow-x-auto"><Table>
               <TableHeader><TableRow><TableHead>ID</TableHead><TableHead>Name</TableHead><TableHead>Role</TableHead><TableHead>Department</TableHead><TableHead>Phone</TableHead><TableHead>Status</TableHead><TableHead>Actions</TableHead></TableRow></TableHeader>
               <TableBody>
                 {staff.map((s) => (
@@ -48,7 +48,7 @@ function StaffManagementContent() {
                   </TableRow>
                 ))}
               </TableBody>
-            </Table>
+            </Table></div>
           </CardContent>
         </Card>
       </div>

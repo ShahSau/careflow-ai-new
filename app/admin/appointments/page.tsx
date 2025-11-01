@@ -32,7 +32,7 @@ function AppointmentManagementContent() {
         </div>
         <Card className="border-2">
           <CardContent className="pt-6">
-            <Table>
+            <div className="overflow-x-auto"><Table>
               <TableHeader><TableRow><TableHead>ID</TableHead><TableHead>Patient</TableHead><TableHead>Doctor</TableHead><TableHead>Date</TableHead><TableHead>Time</TableHead><TableHead>Status</TableHead><TableHead>Actions</TableHead></TableRow></TableHeader>
               <TableBody>
                 {appointments.map((apt) => (
@@ -47,7 +47,7 @@ function AppointmentManagementContent() {
                   </TableRow>
                 ))}
               </TableBody>
-            </Table>
+            </Table></div>
           </CardContent>
         </Card>
       </div>

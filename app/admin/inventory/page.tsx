@@ -34,7 +34,7 @@ function InventoryManagementContent() {
         </div>
         <Card className="border-2">
           <CardContent className="pt-6">
-            <Table>
+            <div className="overflow-x-auto"><Table>
               <TableHeader><TableRow><TableHead>Item ID</TableHead><TableHead>Item Name</TableHead><TableHead>Quantity</TableHead><TableHead>Min Stock</TableHead><TableHead>Category</TableHead><TableHead>Status</TableHead><TableHead>Actions</TableHead></TableRow></TableHeader>
               <TableBody>
                 {inventory.map((item) => (
@@ -49,7 +49,7 @@ function InventoryManagementContent() {
                   </TableRow>
                 ))}
               </TableBody>
-            </Table>
+            </Table></div>
           </CardContent>
         </Card>
       </div>

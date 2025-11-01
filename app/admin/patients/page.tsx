@@ -88,7 +88,7 @@ function PatientManagementContent() {
             </div>
           </CardHeader>
           <CardContent>
-            <Table>
+            <div className="overflow-x-auto"><Table>
               <TableHeader>
                 <TableRow>
                   <TableHead>Patient ID</TableHead>
@@ -121,7 +121,7 @@ function PatientManagementContent() {
                   </TableRow>
                 ))}
               </TableBody>
-            </Table>
+            </Table></div>
           </CardContent>
         </Card>
       </div>

@@ -34,7 +34,7 @@ function RoomManagementContent() {
         </div>
         <Card className="border-2">
           <CardContent className="pt-6">
-            <Table>
+            <div className="overflow-x-auto"><Table>
               <TableHeader><TableRow><TableHead>Room</TableHead><TableHead>Type</TableHead><TableHead>Total Beds</TableHead><TableHead>Occupied</TableHead><TableHead>Available</TableHead><TableHead>Department</TableHead><TableHead>Status</TableHead></TableRow></TableHeader>
               <TableBody>
                 {rooms.map((room) => (
@@ -49,7 +49,7 @@ function RoomManagementContent() {
                   </TableRow>
                 ))}
               </TableBody>
-            </Table>
+            </Table></div>
           </CardContent>
         </Card>
       </div>

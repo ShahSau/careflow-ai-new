@@ -33,7 +33,7 @@ function DepartmentManagementContent() {
         </div>
         <Card className="border-2">
           <CardContent className="pt-6">
-            <Table>
+            <div className="overflow-x-auto"><Table>
               <TableHeader><TableRow><TableHead>Department</TableHead><TableHead>Head</TableHead><TableHead>Staff</TableHead><TableHead>Beds</TableHead><TableHead>Actions</TableHead></TableRow></TableHeader>
               <TableBody>
                 {departments.map((dept) => (
@@ -46,7 +46,7 @@ function DepartmentManagementContent() {
                   </TableRow>
                 ))}
               </TableBody>
-            </Table>
+            </Table></div>
           </CardContent>
         </Card>
       </div>
