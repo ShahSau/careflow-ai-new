@@ -12,7 +12,7 @@ function ReportsAnalyticsContent() {
   const { user, logout } = useAuth();
 
   const stats = [
-    { label: 'Monthly Revenue', value: '$284,500', change: '+18.3%', icon: DollarSign, color: 'text-emerald-600', bg: 'bg-emerald-50' },
+    { label: 'Monthly Revenue', value: '$284,500', change: '+18.3%', icon: DollarSign, color: 'text-blue-600', bg: 'bg-blue-50' },
     { label: 'Total Patients', value: '2,847', change: '+12.5%', icon: Users, color: 'text-blue-600', bg: 'bg-blue-50' },
     { label: 'Appointments', value: '1,234', change: '+8.7%', icon: Calendar, color: 'text-purple-600', bg: 'bg-purple-50' },
   ];
@@ -83,7 +83,7 @@ function ReportsAnalyticsContent() {
           <Card className="border-2">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <BarChart3 className="h-5 w-5 text-emerald-600" />
+                <BarChart3 className="h-5 w-5 text-blue-600" />
                 Revenue Overview
               </CardTitle>
             </CardHeader>

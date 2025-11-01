@@ -30,7 +30,7 @@ function BillingManagementContent() {
         <div className="flex items-center gap-4 mb-6">
           <Link href="/admin/dashboard"><Button variant="ghost" size="icon"><ChevronLeft /></Button></Link>
           <div className="flex-1"><h1 className="text-4xl font-bold">Billing Management</h1></div>
-          <Button className="bg-emerald-600 hover:bg-emerald-700"><FileText className="h-5 w-5 mr-2" />Generate Bill</Button>
+          <Button className="bg-blue-600 hover:bg-blue-700"><FileText className="h-5 w-5 mr-2" />Generate Bill</Button>
         </div>
         <Card className="border-2">
           <CardContent className="pt-6">

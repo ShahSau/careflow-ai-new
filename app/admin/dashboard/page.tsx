@@ -41,7 +41,7 @@ function AdminDashboardContent() {
     { label: 'Total Patients', value: '2,847', change: '+12.5%', trend: 'up', icon: Users, color: 'text-blue-600', bg: 'bg-blue-50' },
     { label: 'Active Doctors', value: '156', change: '+3.2%', trend: 'up', icon: Stethoscope, color: 'text-blue-600', bg: 'bg-blue-50' },
     { label: 'Appointments Today', value: '89', change: '-5.1%', trend: 'down', icon: Calendar, color: 'text-purple-600', bg: 'bg-purple-50' },
-    { label: 'Revenue (MTD)', value: '$284,500', change: '+18.3%', trend: 'up', icon: DollarSign, color: 'text-emerald-600', bg: 'bg-emerald-50' },
+    { label: 'Revenue (MTD)', value: '$284,500', change: '+18.3%', trend: 'up', icon: DollarSign, color: 'text-blue-600', bg: 'bg-blue-50' },
   ];
 
   const quickStats = [
@@ -66,7 +66,7 @@ function AdminDashboardContent() {
     { title: 'Staff Management', desc: 'Manage nurses and admin staff', icon: UserPlus, href: '/admin/staff', color: 'bg-pink-600' },
     { title: 'Room & Beds', desc: 'Track room and bed availability', icon: Bed, href: '/admin/rooms', color: 'bg-orange-600' },
     { title: 'Inventory', desc: 'Medical supplies and equipment', icon: Package, href: '/admin/inventory', color: 'bg-cyan-600' },
-    { title: 'Billing', desc: 'Generate bills and track payments', icon: DollarSign, href: '/admin/billing', color: 'bg-emerald-600' },
+    { title: 'Billing', desc: 'Generate bills and track payments', icon: DollarSign, href: '/admin/billing', color: 'bg-blue-600' },
     { title: 'Reports & Analytics', desc: 'Revenue and patient statistics', icon: BarChart3, href: '/admin/reports', color: 'bg-violet-600' },
   ];
 
