@@ -110,7 +110,7 @@ function PatientManagementContent() {
                     <TableCell>{patient.gender}</TableCell>
                     <TableCell>{patient.phone}</TableCell>
                     <TableCell><Badge variant="outline">{patient.bloodType}</Badge></TableCell>
-                    <TableCell><Badge className={patient.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}>{patient.status}</Badge></TableCell>
+                    <TableCell><Badge className={patient.status === 'Active' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'}>{patient.status}</Badge></TableCell>
                     <TableCell>
                       <div className="flex gap-2">
                         <Button size="sm" variant="ghost"><Eye className="h-4 w-4" /></Button>

@@ -182,7 +182,7 @@ function PatientLabResultsPageContent() {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'completed':
-        return <CheckCircle2 className="h-5 w-5 text-green-600" />;
+        return <CheckCircle2 className="h-5 w-5 text-blue-600" />;
       case 'pending':
         return <Clock className="h-5 w-5 text-yellow-600" />;
       case 'processing':
@@ -195,7 +195,7 @@ function PatientLabResultsPageContent() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed':
-        return 'bg-green-50 text-green-700 border-green-300';
+        return 'bg-blue-50 text-blue-700 border-blue-300';
       case 'pending':
         return 'bg-yellow-50 text-yellow-700 border-yellow-300';
       case 'processing':
@@ -209,7 +209,7 @@ function PatientLabResultsPageContent() {
     if (!result) return '';
     switch (result.toLowerCase()) {
       case 'normal':
-        return 'bg-green-100 text-green-700 border-green-300';
+        return 'bg-blue-100 text-blue-700 border-blue-300';
       case 'borderline':
         return 'bg-yellow-100 text-yellow-700 border-yellow-300';
       case 'abnormal':
@@ -222,7 +222,7 @@ function PatientLabResultsPageContent() {
   const getParameterStatus = (status: string) => {
     switch (status) {
       case 'normal':
-        return <Badge className="bg-green-100 text-green-700 border-green-300">Normal</Badge>;
+        return <Badge className="bg-blue-100 text-blue-700 border-blue-300">Normal</Badge>;
       case 'high':
         return <Badge className="bg-red-100 text-red-700 border-red-300">High</Badge>;
       case 'low':
@@ -238,7 +238,7 @@ function PatientLabResultsPageContent() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center gap-2">
-              <Hospital className="h-8 w-8 text-green-500" />
+              <Hospital className="h-8 w-8 text-blue-500" />
               <span className="text-2xl font-bold">MediCare</span>
             </Link>
             <div className="flex items-center gap-4">
@@ -294,15 +294,15 @@ function PatientLabResultsPageContent() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <Card className="border-2 border-green-500 bg-green-50 dark:bg-green-950">
+            <Card className="border-2 border-blue-500 bg-blue-50 dark:bg-blue-950">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 rounded-lg bg-green-100 dark:bg-green-900">
-                    <CheckCircle2 className="h-6 w-6 text-green-600" />
+                  <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900">
+                    <CheckCircle2 className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Completed</p>
-                    <p className="text-3xl font-bold text-green-700">
+                    <p className="text-3xl font-bold text-blue-700">
                       {labResults.filter(r => r.status === 'completed').length}
                     </p>
                   </div>
@@ -392,12 +392,12 @@ function PatientLabResultsPageContent() {
 
                             <div className="grid md:grid-cols-2 gap-3 mb-4">
                               <div className="flex items-center gap-2 text-sm">
-                                <Calendar className="h-4 w-4 text-green-600" />
+                                <Calendar className="h-4 w-4 text-blue-600" />
                                 <span className="text-muted-foreground">Test Date: {result.testDate}</span>
                               </div>
                               {result.resultDate && (
                                 <div className="flex items-center gap-2 text-sm">
-                                  <Calendar className="h-4 w-4 text-green-600" />
+                                  <Calendar className="h-4 w-4 text-blue-600" />
                                   <span className="text-muted-foreground">Result Date: {result.resultDate}</span>
                                 </div>
                               )}

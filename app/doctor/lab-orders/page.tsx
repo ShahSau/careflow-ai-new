@@ -74,7 +74,7 @@ function LabOrdersContent() {
                     <p className="text-sm text-muted-foreground">{order.patient} ({order.patientId})</p>
                     <p className="text-sm text-muted-foreground">Date: {order.date}</p>
                   </div>
-                  <Badge className={order.status === 'completed' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}>{order.status}</Badge>
+                  <Badge className={order.status === 'completed' ? 'bg-blue-100 text-blue-700' : 'bg-yellow-100 text-yellow-700'}>{order.status}</Badge>
                 </div>
                 {order.result && <div className="mt-4"><Badge className="bg-blue-100 text-blue-700">Result: {order.result}</Badge></div>}
               </CardContent>

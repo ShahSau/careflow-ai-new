@@ -43,7 +43,7 @@ function BillingManagementContent() {
                     <TableCell>{bill.patient}</TableCell>
                     <TableCell className="font-bold">${bill.amount}</TableCell>
                     <TableCell>{bill.date}</TableCell>
-                    <TableCell><Badge className={bill.status === 'Paid' ? 'bg-green-100 text-green-700' : bill.status === 'Pending' ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-700'}>{bill.status}</Badge></TableCell>
+                    <TableCell><Badge className={bill.status === 'Paid' ? 'bg-blue-100 text-blue-700' : bill.status === 'Pending' ? 'bg-yellow-100 text-yellow-700' : 'bg-red-100 text-red-700'}>{bill.status}</Badge></TableCell>
                     <TableCell><Button size="sm" variant="outline"><DollarSign className="h-4 w-4 mr-1" />Process</Button></TableCell>
                   </TableRow>
                 ))}

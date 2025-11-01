@@ -43,9 +43,9 @@ function RoomManagementContent() {
                     <TableCell><Badge variant="outline">{room.type}</Badge></TableCell>
                     <TableCell>{room.beds}</TableCell>
                     <TableCell>{room.occupied}</TableCell>
-                    <TableCell className="font-bold text-green-600">{room.beds - room.occupied}</TableCell>
+                    <TableCell className="font-bold text-blue-600">{room.beds - room.occupied}</TableCell>
                     <TableCell>{room.department}</TableCell>
-                    <TableCell><Badge className={room.status === 'Available' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}>{room.status}</Badge></TableCell>
+                    <TableCell><Badge className={room.status === 'Available' ? 'bg-blue-100 text-blue-700' : 'bg-red-100 text-red-700'}>{room.status}</Badge></TableCell>
                   </TableRow>
                 ))}
               </TableBody>

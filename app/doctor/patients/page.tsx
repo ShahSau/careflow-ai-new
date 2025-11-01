@@ -86,7 +86,7 @@ function PatientsListContent() {
                           <h3 className="text-2xl font-bold">{patient.name}</h3>
                           <p className="text-sm text-muted-foreground">{patient.id}</p>
                         </div>
-                        <Badge className="bg-green-100 text-green-700 border-green-300">{patient.status}</Badge>
+                        <Badge className="bg-blue-100 text-blue-700 border-blue-300">{patient.status}</Badge>
                       </div>
                       <div className="grid md:grid-cols-2 gap-3 mb-4">
                         <div className="text-sm"><span className="text-muted-foreground">Age:</span> {patient.age} years</div>

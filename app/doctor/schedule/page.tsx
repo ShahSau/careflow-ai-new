@@ -108,7 +108,7 @@ function DoctorScheduleContent() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'confirmed':
-        return 'bg-green-50 text-green-700 border-green-300';
+        return 'bg-blue-50 text-blue-700 border-blue-300';
       case 'waiting':
         return 'bg-yellow-50 text-yellow-700 border-yellow-300';
       case 'completed':

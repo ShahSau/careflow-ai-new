@@ -112,14 +112,14 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="py-32 px-4 bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+      <section className="py-32 px-4 bg-gradient-to-br from-blue-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Badge className="mb-6 px-6 py-2 text-base bg-green-600">Get In Touch</Badge>
+            <Badge className="mb-6 px-6 py-2 text-base bg-blue-600">Get In Touch</Badge>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
               Contact Us
             </h1>
@@ -182,8 +182,8 @@ export default function ContactPage() {
                       animate={{ scale: 1 }}
                       className="text-center py-12"
                     >
-                      <div className="inline-block p-4 rounded-full bg-green-100 dark:bg-green-900 mb-4">
-                        <CheckCircle2 className="h-16 w-16 text-green-600" />
+                      <div className="inline-block p-4 rounded-full bg-blue-100 dark:bg-blue-900 mb-4">
+                        <CheckCircle2 className="h-16 w-16 text-blue-600" />
                       </div>
                       <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
                       <p className="text-muted-foreground">
@@ -272,7 +272,7 @@ export default function ContactPage() {
                       <Button
                         type="submit"
                         size="lg"
-                        className="w-full bg-green-600 hover:bg-green-700"
+                        className="w-full bg-blue-600 hover:bg-blue-700"
                       >
                         <Send className="h-5 w-5 mr-2" />
                         Send Message
@@ -299,9 +299,9 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4 overflow-hidden">
-                    <div className="w-full h-full bg-gradient-to-br from-green-100 to-blue-100 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
+                    <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-100 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
                       <div className="text-center p-8">
-                        <MapPin className="h-16 w-16 mx-auto mb-4 text-green-600" />
+                        <MapPin className="h-16 w-16 mx-auto mb-4 text-blue-600" />
                         <p className="text-lg font-semibold">Medicare Hospital</p>
                         <p className="text-sm text-muted-foreground">123 Healthcare Boulevard</p>
                         <p className="text-sm text-muted-foreground">Medical District, NY 10001</p>
@@ -310,7 +310,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
-                      <Building2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <Building2 className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold text-sm">Main Building</p>
                         <p className="text-sm text-muted-foreground">

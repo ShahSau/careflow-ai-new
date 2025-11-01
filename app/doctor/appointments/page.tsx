@@ -91,7 +91,7 @@ function AppointmentsContent() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'confirmed':
-        return 'bg-green-50 text-green-700 border-green-300';
+        return 'bg-blue-50 text-blue-700 border-blue-300';
       case 'waiting':
         return 'bg-yellow-50 text-yellow-700 border-yellow-300';
       case 'upcoming':
@@ -227,7 +227,7 @@ function AppointmentsContent() {
                             <Link href={`/doctor/patients/${appointment.patientId}`}>
                               <Button size="sm" variant="outline">View Patient</Button>
                             </Link>
-                            <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                            <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
                               Confirm Appointment
                             </Button>
                             <Button size="sm" variant="outline">Reschedule</Button>

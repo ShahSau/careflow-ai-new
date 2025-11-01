@@ -160,7 +160,7 @@ function PatientBillingPageContent() {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'paid':
-        return <CheckCircle2 className="h-5 w-5 text-green-600" />;
+        return <CheckCircle2 className="h-5 w-5 text-blue-600" />;
       case 'pending':
         return <Clock className="h-5 w-5 text-yellow-600" />;
       case 'partial':
@@ -175,7 +175,7 @@ function PatientBillingPageContent() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'paid':
-        return 'bg-green-50 text-green-700 border-green-300';
+        return 'bg-blue-50 text-blue-700 border-blue-300';
       case 'pending':
         return 'bg-yellow-50 text-yellow-700 border-yellow-300';
       case 'partial':
@@ -193,7 +193,7 @@ function PatientBillingPageContent() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center gap-2">
-              <Hospital className="h-8 w-8 text-green-500" />
+              <Hospital className="h-8 w-8 text-blue-500" />
               <span className="text-2xl font-bold">MediCare</span>
             </Link>
             <div className="flex items-center gap-4">
@@ -264,15 +264,15 @@ function PatientBillingPageContent() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-green-500 bg-green-50 dark:bg-green-950">
+            <Card className="border-2 border-blue-500 bg-blue-50 dark:bg-blue-950">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 rounded-lg bg-green-100 dark:bg-green-900">
-                    <CheckCircle2 className="h-6 w-6 text-green-600" />
+                  <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900">
+                    <CheckCircle2 className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Total Paid</p>
-                    <p className="text-2xl font-bold text-green-700">${totalPaid.toFixed(2)}</p>
+                    <p className="text-2xl font-bold text-blue-700">${totalPaid.toFixed(2)}</p>
                   </div>
                 </div>
               </CardContent>
@@ -334,19 +334,19 @@ function PatientBillingPageContent() {
                     <div className="flex flex-col gap-6">
                       <div className="flex items-start justify-between">
                         <div className="flex items-start gap-4">
-                          <div className="p-4 rounded-xl bg-green-100 dark:bg-green-900">
-                            <Receipt className="h-8 w-8 text-green-600" />
+                          <div className="p-4 rounded-xl bg-blue-100 dark:bg-blue-900">
+                            <Receipt className="h-8 w-8 text-blue-600" />
                           </div>
                           <div>
                             <h3 className="text-2xl font-bold mb-1">{bill.invoiceNumber}</h3>
                             <p className="text-muted-foreground mb-2">{bill.description}</p>
                             <div className="flex items-center gap-4 text-sm">
                               <div className="flex items-center gap-1">
-                                <Calendar className="h-4 w-4 text-green-600" />
+                                <Calendar className="h-4 w-4 text-blue-600" />
                                 <span className="text-muted-foreground">Issued: {bill.date}</span>
                               </div>
                               <div className="flex items-center gap-1">
-                                <Calendar className="h-4 w-4 text-green-600" />
+                                <Calendar className="h-4 w-4 text-blue-600" />
                                 <span className="text-muted-foreground">Due: {bill.dueDate}</span>
                               </div>
                             </div>
@@ -386,9 +386,9 @@ function PatientBillingPageContent() {
                           <p className="text-sm text-muted-foreground mb-1">Total Amount</p>
                           <p className="text-2xl font-bold">${bill.amount.toFixed(2)}</p>
                         </div>
-                        <div className="p-4 rounded-lg bg-green-50 dark:bg-green-950">
+                        <div className="p-4 rounded-lg bg-blue-50 dark:bg-blue-950">
                           <p className="text-sm text-muted-foreground mb-1">Amount Paid</p>
-                          <p className="text-2xl font-bold text-green-700">${bill.paid.toFixed(2)}</p>
+                          <p className="text-2xl font-bold text-blue-700">${bill.paid.toFixed(2)}</p>
                         </div>
                         <div className="p-4 rounded-lg bg-yellow-50 dark:bg-yellow-950">
                           <p className="text-sm text-muted-foreground mb-1">Balance Due</p>
@@ -400,7 +400,7 @@ function PatientBillingPageContent() {
                         <div className="p-3 rounded-lg bg-muted/50">
                           <div className="flex items-center justify-between text-sm">
                             <div className="flex items-center gap-2">
-                              <CheckCircle2 className="h-4 w-4 text-green-600" />
+                              <CheckCircle2 className="h-4 w-4 text-blue-600" />
                               <span className="font-medium">Payment Received</span>
                             </div>
                             <div className="flex items-center gap-4 text-muted-foreground">
@@ -425,7 +425,7 @@ function PatientBillingPageContent() {
 
                       <div className="flex flex-wrap gap-2">
                         {bill.balance > 0 && (
-                          <Button className="bg-green-600 hover:bg-green-700">
+                          <Button className="bg-blue-600 hover:bg-blue-700">
                             <CreditCard className="h-4 w-4 mr-2" />
                             Pay Now ${bill.balance.toFixed(2)}
                           </Button>
@@ -454,7 +454,7 @@ function PatientBillingPageContent() {
             viewport={{ once: true }}
             className="mt-8"
           >
-            <Card className="border-2 border-green-500 bg-green-50 dark:bg-green-950">
+            <Card className="border-2 border-blue-500 bg-blue-50 dark:bg-blue-950">
               <CardContent className="p-6">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                   <div>
@@ -462,8 +462,8 @@ function PatientBillingPageContent() {
                     <p className="text-muted-foreground">Pay your outstanding balance in full</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <p className="text-3xl font-bold text-green-700">${totalBalance.toFixed(2)}</p>
-                    <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                    <p className="text-3xl font-bold text-blue-700">${totalBalance.toFixed(2)}</p>
+                    <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                       <CreditCard className="h-5 w-5 mr-2" />
                       Pay Full Balance
                     </Button>

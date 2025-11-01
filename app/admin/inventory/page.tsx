@@ -44,7 +44,7 @@ function InventoryManagementContent() {
                     <TableCell>{item.quantity}</TableCell>
                     <TableCell>{item.minStock}</TableCell>
                     <TableCell><Badge variant="outline">{item.category}</Badge></TableCell>
-                    <TableCell><Badge className={item.status === 'In Stock' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}>{item.status}</Badge></TableCell>
+                    <TableCell><Badge className={item.status === 'In Stock' ? 'bg-blue-100 text-blue-700' : 'bg-yellow-100 text-yellow-700'}>{item.status}</Badge></TableCell>
                     <TableCell><Button size="sm" variant="ghost"><Edit className="h-4 w-4" /></Button></TableCell>
                   </TableRow>
                 ))}

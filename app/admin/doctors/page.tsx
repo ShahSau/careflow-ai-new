@@ -35,7 +35,7 @@ function DoctorManagementContent() {
         <div className="flex items-center gap-4 mb-6">
           <Link href="/admin/dashboard"><Button variant="ghost" size="icon"><ChevronLeft /></Button></Link>
           <div className="flex-1"><h1 className="text-4xl font-bold">Doctor Management</h1></div>
-          <Button className="bg-green-600 hover:bg-green-700"><UserPlus className="h-5 w-5 mr-2" />Add Doctor</Button>
+          <Button className="bg-blue-600 hover:bg-blue-700"><UserPlus className="h-5 w-5 mr-2" />Add Doctor</Button>
         </div>
         <Card className="border-2">
           <CardHeader>
@@ -51,7 +51,7 @@ function DoctorManagementContent() {
                     <TableCell>{doctor.name}</TableCell>
                     <TableCell><Badge variant="outline">{doctor.specialty}</Badge></TableCell>
                     <TableCell>{doctor.phone}</TableCell>
-                    <TableCell><Badge className="bg-green-100 text-green-700">{doctor.status}</Badge></TableCell>
+                    <TableCell><Badge className="bg-blue-100 text-blue-700">{doctor.status}</Badge></TableCell>
                     <TableCell><div className="flex gap-2"><Button size="sm" variant="ghost"><Edit className="h-4 w-4" /></Button><Button size="sm" variant="ghost"><Trash2 className="h-4 w-4 text-red-600" /></Button></div></TableCell>
                   </TableRow>
                 ))}

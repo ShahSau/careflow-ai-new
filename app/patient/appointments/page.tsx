@@ -146,7 +146,7 @@ function PatientAppointmentsPageContent() {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'confirmed':
-        return <CheckCircle2 className="h-5 w-5 text-green-600" />;
+        return <CheckCircle2 className="h-5 w-5 text-blue-600" />;
       case 'pending':
         return <AlertCircle className="h-5 w-5 text-yellow-600" />;
       case 'cancelled':
@@ -161,7 +161,7 @@ function PatientAppointmentsPageContent() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'confirmed':
-        return 'bg-green-50 text-green-700 border-green-300';
+        return 'bg-blue-50 text-blue-700 border-blue-300';
       case 'pending':
         return 'bg-yellow-50 text-yellow-700 border-yellow-300';
       case 'cancelled':
@@ -179,7 +179,7 @@ function PatientAppointmentsPageContent() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center gap-2">
-              <Hospital className="h-8 w-8 text-green-500" />
+              <Hospital className="h-8 w-8 text-blue-500" />
               <span className="text-2xl font-bold">MediCare</span>
             </Link>
             <div className="flex items-center gap-4">
@@ -210,7 +210,7 @@ function PatientAppointmentsPageContent() {
             </div>
             <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
               <DialogTrigger asChild>
-                <Button className="bg-green-600 hover:bg-green-700">
+                <Button className="bg-blue-600 hover:bg-blue-700">
                   <Plus className="h-5 w-5 mr-2" />
                   New Appointment
                 </Button>
@@ -315,7 +315,7 @@ function PatientAppointmentsPageContent() {
                   </div>
 
                   <div className="flex gap-3">
-                    <Button type="submit" className="flex-1 bg-green-600 hover:bg-green-700 h-12">
+                    <Button type="submit" className="flex-1 bg-blue-600 hover:bg-blue-700 h-12">
                       <Calendar className="h-5 w-5 mr-2" />
                       Book Appointment
                     </Button>
@@ -370,7 +370,7 @@ function PatientAppointmentsPageContent() {
                   : 'You haven\'t scheduled any appointments yet'}
               </p>
               <Button
-                className="bg-green-600 hover:bg-green-700"
+                className="bg-blue-600 hover:bg-blue-700"
                 onClick={() => setIsDialogOpen(true)}
               >
                 <Plus className="h-5 w-5 mr-2" />
@@ -389,8 +389,8 @@ function PatientAppointmentsPageContent() {
                   <CardContent className="p-6">
                     <div className="flex flex-col lg:flex-row gap-6">
                       <div className="flex items-start gap-4 flex-1">
-                        <div className="p-4 rounded-xl bg-green-100 dark:bg-green-900">
-                          <Stethoscope className="h-8 w-8 text-green-600" />
+                        <div className="p-4 rounded-xl bg-blue-100 dark:bg-blue-900">
+                          <Stethoscope className="h-8 w-8 text-blue-600" />
                         </div>
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-3">
@@ -408,15 +408,15 @@ function PatientAppointmentsPageContent() {
 
                           <div className="grid md:grid-cols-2 gap-3 mb-4">
                             <div className="flex items-center gap-2 text-sm">
-                              <CalendarClock className="h-4 w-4 text-green-600" />
+                              <CalendarClock className="h-4 w-4 text-blue-600" />
                               <span className="font-medium">{appointment.date}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm">
-                              <Clock className="h-4 w-4 text-green-600" />
+                              <Clock className="h-4 w-4 text-blue-600" />
                               <span className="font-medium">{appointment.time}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm">
-                              <MapPin className="h-4 w-4 text-green-600" />
+                              <MapPin className="h-4 w-4 text-blue-600" />
                               <span className="text-muted-foreground">{appointment.location}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm">

@@ -157,7 +157,7 @@ function PatientDashboardContent() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center gap-2">
-              <Hospital className="h-8 w-8 text-green-500" />
+              <Hospital className="h-8 w-8 text-blue-500" />
               <span className="text-2xl font-bold">MediCare</span>
             </Link>
             <div className="flex items-center gap-4">
@@ -183,7 +183,7 @@ function PatientDashboardContent() {
             </div>
             <div className="flex items-center gap-3">
               <Link href="/patient/appointments">
-                <Button className="bg-green-600 hover:bg-green-700">
+                <Button className="bg-blue-600 hover:bg-blue-700">
                   <Plus className="h-5 w-5 mr-2" />
                   Book Appointment
                 </Button>
@@ -197,7 +197,7 @@ function PatientDashboardContent() {
 
           <div className="flex items-center gap-3 p-4 rounded-lg bg-white dark:bg-gray-900 border">
             <Avatar className="h-16 w-16">
-              <AvatarFallback className="text-xl bg-green-100 text-green-700">
+              <AvatarFallback className="text-xl bg-blue-100 text-blue-700">
                 {user.name.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
             </Avatar>
@@ -205,7 +205,7 @@ function PatientDashboardContent() {
               <h3 className="font-semibold text-lg">{user.name}</h3>
               <p className="text-sm text-muted-foreground">Patient ID: PT{Math.floor(Math.random() * 100000)}</p>
             </div>
-            <Badge className="bg-green-100 text-green-700 border-green-300">Active Patient</Badge>
+            <Badge className="bg-blue-100 text-blue-700 border-blue-300">Active Patient</Badge>
           </div>
         </motion.div>
 
@@ -224,7 +224,7 @@ function PatientDashboardContent() {
                     <div className="p-3 rounded-xl" style={{ backgroundColor: `${metric.color}20` }}>
                       <Icon className="h-6 w-6" style={{ color: metric.color }} />
                     </div>
-                    <Badge variant="outline" className="bg-green-50 text-green-700 border-green-300">
+                    <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-300">
                       {metric.status}
                     </Badge>
                   </div>
@@ -249,7 +249,7 @@ function PatientDashboardContent() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-2xl flex items-center gap-2">
-                    <Calendar className="h-6 w-6 text-green-600" />
+                    <Calendar className="h-6 w-6 text-blue-600" />
                     Upcoming Appointments
                   </CardTitle>
                   <Link href="/patient/appointments">
@@ -267,8 +267,8 @@ function PatientDashboardContent() {
                     key={appointment.id}
                     className="flex items-start gap-4 p-4 rounded-lg border-2 hover:shadow-md transition-all"
                   >
-                    <div className="p-3 rounded-xl bg-green-100 dark:bg-green-900">
-                      <Stethoscope className="h-6 w-6 text-green-600" />
+                    <div className="p-3 rounded-xl bg-blue-100 dark:bg-blue-900">
+                      <Stethoscope className="h-6 w-6 text-blue-600" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-2">
@@ -280,7 +280,7 @@ function PatientDashboardContent() {
                           variant="outline"
                           className={
                             appointment.status === 'confirmed'
-                              ? 'bg-green-50 text-green-700 border-green-300'
+                              ? 'bg-blue-50 text-blue-700 border-blue-300'
                               : 'bg-yellow-50 text-yellow-700 border-yellow-300'
                           }
                         >
@@ -325,7 +325,7 @@ function PatientDashboardContent() {
             <Card className="border-2">
               <CardHeader>
                 <CardTitle className="text-xl flex items-center gap-2">
-                  <Activity className="h-5 w-5 text-green-600" />
+                  <Activity className="h-5 w-5 text-blue-600" />
                   Recent Activity
                 </CardTitle>
               </CardHeader>
@@ -336,7 +336,7 @@ function PatientDashboardContent() {
                     return (
                       <div key={index} className="flex items-start gap-3">
                         <div className="p-2 rounded-lg bg-muted">
-                          <Icon className="h-4 w-4 text-green-600" />
+                          <Icon className="h-4 w-4 text-blue-600" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-medium">{activity.text}</p>
@@ -361,7 +361,7 @@ function PatientDashboardContent() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-2xl flex items-center gap-2">
-                    <FileText className="h-6 w-6 text-green-600" />
+                    <FileText className="h-6 w-6 text-blue-600" />
                     Lab Results
                   </CardTitle>
                   <Link href="/patient/lab-results">
@@ -380,8 +380,8 @@ function PatientDashboardContent() {
                     className="flex items-center justify-between p-4 rounded-lg border hover:shadow-md transition-all"
                   >
                     <div className="flex items-center gap-3">
-                      <div className={`p-2 rounded-lg ${test.status === 'completed' ? 'bg-green-100 dark:bg-green-900' : 'bg-yellow-100 dark:bg-yellow-900'}`}>
-                        <FileCheck className={`h-5 w-5 ${test.status === 'completed' ? 'text-green-600' : 'text-yellow-600'}`} />
+                      <div className={`p-2 rounded-lg ${test.status === 'completed' ? 'bg-blue-100 dark:bg-blue-900' : 'bg-yellow-100 dark:bg-yellow-900'}`}>
+                        <FileCheck className={`h-5 w-5 ${test.status === 'completed' ? 'text-blue-600' : 'text-yellow-600'}`} />
                       </div>
                       <div>
                         <p className="font-semibold">{test.name}</p>
@@ -390,7 +390,7 @@ function PatientDashboardContent() {
                     </div>
                     <div className="text-right">
                       {test.result ? (
-                        <Badge variant="outline" className="bg-green-50 text-green-700 border-green-300">
+                        <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-300">
                           {test.result}
                         </Badge>
                       ) : (
@@ -419,7 +419,7 @@ function PatientDashboardContent() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-2xl flex items-center gap-2">
-                    <Pill className="h-6 w-6 text-green-600" />
+                    <Pill className="h-6 w-6 text-blue-600" />
                     Active Prescriptions
                   </CardTitle>
                   <Link href="/patient/prescriptions">
@@ -442,7 +442,7 @@ function PatientDashboardContent() {
                         <h4 className="font-semibold text-lg">{prescription.medication}</h4>
                         <p className="text-sm text-muted-foreground">Prescribed by {prescription.doctor}</p>
                       </div>
-                      <Badge className="bg-green-100 text-green-700 border-green-300">
+                      <Badge className="bg-blue-100 text-blue-700 border-blue-300">
                         {prescription.status}
                       </Badge>
                     </div>
@@ -472,12 +472,12 @@ function PatientDashboardContent() {
           animate="animate"
           className="mt-6"
         >
-          <Card className="border-2 border-green-500 bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
+          <Card className="border-2 border-blue-500 bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="p-4 rounded-xl bg-green-100 dark:bg-green-900">
-                    <CreditCard className="h-8 w-8 text-green-600" />
+                  <div className="p-4 rounded-xl bg-blue-100 dark:bg-blue-900">
+                    <CreditCard className="h-8 w-8 text-blue-600" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-1">Billing & Payments</h3>
@@ -487,10 +487,10 @@ function PatientDashboardContent() {
                 <div className="flex items-center gap-6">
                   <div className="text-right">
                     <p className="text-sm text-muted-foreground mb-1">Outstanding Balance</p>
-                    <p className="text-2xl font-bold text-green-700">$475.00</p>
+                    <p className="text-2xl font-bold text-blue-700">$475.00</p>
                   </div>
                   <Link href="/patient/billing">
-                    <Button className="bg-green-600 hover:bg-green-700">
+                    <Button className="bg-blue-600 hover:bg-blue-700">
                       <DollarSign className="h-5 w-5 mr-2" />
                       View Billing
                     </Button>

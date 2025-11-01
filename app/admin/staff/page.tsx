@@ -43,7 +43,7 @@ function StaffManagementContent() {
                     <TableCell><Badge variant="outline">{s.role}</Badge></TableCell>
                     <TableCell>{s.department}</TableCell>
                     <TableCell>{s.phone}</TableCell>
-                    <TableCell><Badge className="bg-green-100 text-green-700">{s.status}</Badge></TableCell>
+                    <TableCell><Badge className="bg-blue-100 text-blue-700">{s.status}</Badge></TableCell>
                     <TableCell><div className="flex gap-2"><Button size="sm" variant="ghost"><Edit className="h-4 w-4" /></Button><Button size="sm" variant="ghost"><Trash2 className="h-4 w-4 text-red-600" /></Button></div></TableCell>
                   </TableRow>
                 ))}

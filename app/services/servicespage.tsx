@@ -169,14 +169,14 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <section className="py-32 px-4 bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+      <section className="py-32 px-4 bg-gradient-to-br from-blue-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Badge className="mb-6 px-6 py-2 text-base bg-green-600">Our Services</Badge>
+            <Badge className="mb-6 px-6 py-2 text-base bg-blue-600">Our Services</Badge>
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
               Comprehensive Medical Services
             </h1>
@@ -212,7 +212,7 @@ export default function ServicesPage() {
                       >
                         <Icon className="h-10 w-10" style={{ color: service.color }} />
                       </div>
-                      <CardTitle className="text-2xl mb-2 group-hover:text-green-600 transition-colors">
+                      <CardTitle className="text-2xl mb-2 group-hover:text-blue-600 transition-colors">
                         {service.title}
                       </CardTitle>
                       <CardDescription className="text-base leading-relaxed">
@@ -223,7 +223,7 @@ export default function ServicesPage() {
                       <div className="space-y-2 mb-4">
                         {service.features.map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm">
-                            <CheckCircle2 className="h-4 w-4 text-green-600 flex-shrink-0" />
+                            <CheckCircle2 className="h-4 w-4 text-blue-600 flex-shrink-0" />
                             <span className="text-muted-foreground">{feature}</span>
                           </div>
                         ))}
@@ -273,8 +273,8 @@ export default function ServicesPage() {
                 <motion.div key={index} variants={fadeInUp}>
                   <Card className="text-center p-6 h-full hover:shadow-lg transition-all hover:scale-105">
                     <div className="mb-4 flex justify-center">
-                      <div className="p-4 rounded-2xl bg-green-100 dark:bg-green-900">
-                        <Icon className="h-8 w-8 text-green-600" />
+                      <div className="p-4 rounded-2xl bg-blue-100 dark:bg-blue-900">
+                        <Icon className="h-8 w-8 text-blue-600" />
                       </div>
                     </div>
                     <h3 className="font-bold text-xl mb-2">{item.title}</h3>
@@ -297,14 +297,14 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-8 md:p-12 text-center border-2 border-green-500 bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
+            <Card className="p-8 md:p-12 text-center border-2 border-blue-500 bg-gradient-to-br from-blue-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
               <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Book an appointment today and experience world-class healthcare services. Our team is ready to assist you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     <Calendar className="h-5 w-5 mr-2" />
                     Book Appointment
                   </Button>

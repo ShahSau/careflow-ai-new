@@ -42,7 +42,7 @@ function AppointmentManagementContent() {
                     <TableCell>{apt.doctor}</TableCell>
                     <TableCell>{apt.date}</TableCell>
                     <TableCell>{apt.time}</TableCell>
-                    <TableCell><Badge className={apt.status === 'Confirmed' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}>{apt.status}</Badge></TableCell>
+                    <TableCell><Badge className={apt.status === 'Confirmed' ? 'bg-blue-100 text-blue-700' : 'bg-yellow-100 text-yellow-700'}>{apt.status}</Badge></TableCell>
                     <TableCell><Button size="sm" variant="outline">Reschedule</Button></TableCell>
                   </TableRow>
                 ))}

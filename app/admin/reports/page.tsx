@@ -70,7 +70,7 @@ function ReportsAnalyticsContent() {
               <CardContent className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className={`p-3 rounded-xl ${stat.bg}`}><stat.icon className={`h-6 w-6 ${stat.color}`} /></div>
-                  <span className="text-sm text-green-600 flex items-center gap-1"><TrendingUp className="h-4 w-4" />{stat.change}</span>
+                  <span className="text-sm text-blue-600 flex items-center gap-1"><TrendingUp className="h-4 w-4" />{stat.change}</span>
                 </div>
                 <p className="text-sm text-muted-foreground mb-1">{stat.label}</p>
                 <h3 className="text-3xl font-bold">{stat.value}</h3>

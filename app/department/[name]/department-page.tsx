@@ -388,23 +388,23 @@ export default function DepartmentDetailPage({ params }: { params: { name: strin
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <Card className="h-full hover:shadow-xl transition-all group border-2 hover:border-green-500">
+                    <Card className="h-full hover:shadow-xl transition-all group border-2 hover:border-blue-500">
                       <CardHeader className="pb-4">
                         <div className="flex items-start gap-4 mb-4">
-                          <Avatar className="h-20 w-20 border-2 group-hover:border-green-500 transition-colors">
-                            <AvatarFallback className="text-xl bg-green-100 text-green-700">
+                          <Avatar className="h-20 w-20 border-2 group-hover:border-blue-500 transition-colors">
+                            <AvatarFallback className="text-xl bg-blue-100 text-blue-700">
                               {doctor.first_name[0]}{doctor.last_name[0]}
                             </AvatarFallback>
                           </Avatar>
                           <div className="flex-1">
-                            <CardTitle className="text-xl mb-1 group-hover:text-green-600 transition-colors">
+                            <CardTitle className="text-xl mb-1 group-hover:text-blue-600 transition-colors">
                               Dr. {doctor.first_name} {doctor.last_name}
                             </CardTitle>
-                            <CardDescription className="font-semibold text-green-600 mb-2">
+                            <CardDescription className="font-semibold text-blue-600 mb-2">
                               {doctor.specialization}
                             </CardDescription>
                             {doctor.is_available ? (
-                              <Badge variant="outline" className="bg-green-50 text-green-700 border-green-300">
+                              <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-300">
                                 <CheckCircle2 className="h-3 w-3 mr-1" />
                                 Available
                               </Badge>
@@ -424,27 +424,27 @@ export default function DepartmentDetailPage({ params }: { params: { name: strin
 
                         <div className="space-y-2.5">
                           <div className="flex items-center gap-2 text-sm p-2 rounded bg-muted/50">
-                            <Award className="h-4 w-4 flex-shrink-0 text-green-600" />
+                            <Award className="h-4 w-4 flex-shrink-0 text-blue-600" />
                             <span className="line-clamp-1 text-muted-foreground">{doctor.qualification}</span>
                           </div>
 
                           <div className="flex items-center gap-2 text-sm p-2 rounded bg-muted/50">
-                            <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-green-600" />
+                            <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-blue-600" />
                             <span className="text-muted-foreground">{doctor.experience_years} years experience</span>
                           </div>
 
                           <div className="flex items-center gap-2 text-sm p-2 rounded bg-muted/50">
-                            <Mail className="h-4 w-4 flex-shrink-0 text-green-600" />
+                            <Mail className="h-4 w-4 flex-shrink-0 text-blue-600" />
                             <span className="line-clamp-1 text-muted-foreground">{doctor.email}</span>
                           </div>
 
                           <div className="flex items-center gap-2 text-sm p-2 rounded bg-muted/50">
-                            <Phone className="h-4 w-4 flex-shrink-0 text-green-600" />
+                            <Phone className="h-4 w-4 flex-shrink-0 text-blue-600" />
                             <span className="text-muted-foreground">{doctor.phone}</span>
                           </div>
                         </div>
 
-                        <Button className="w-full bg-green-600 hover:bg-green-700 group-hover:shadow-lg transition-all">
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700 group-hover:shadow-lg transition-all">
                           <Calendar className="h-4 w-4 mr-2" />
                           Book Appointment
                           <ChevronRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />

@@ -118,7 +118,7 @@ function PatientDetailsContent({ params }: { params: { id: string } }) {
                         <div className="flex items-center gap-3 mb-3">
                           <Calendar className="h-5 w-5 text-blue-600" />
                           <h3 className="font-semibold text-lg">{apt.type}</h3>
-                          <Badge className={apt.status === 'upcoming' ? 'bg-blue-100 text-blue-700' : apt.status === 'confirmed' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}>
+                          <Badge className={apt.status === 'upcoming' ? 'bg-blue-100 text-blue-700' : apt.status === 'confirmed' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'}>
                             {apt.status}
                           </Badge>
                         </div>
@@ -135,7 +135,7 @@ function PatientDetailsContent({ params }: { params: { id: string } }) {
                         <p className="text-sm text-muted-foreground mb-3">{apt.reason}</p>
                         {apt.status === 'upcoming' && (
                           <div className="flex gap-2">
-                            <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                            <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
                               Confirm Appointment
                             </Button>
                             <Button size="sm" variant="outline">
@@ -165,7 +165,7 @@ function PatientDetailsContent({ params }: { params: { id: string } }) {
           <TabsContent value="prescriptions">
             <div className="space-y-4">
               {patient.prescriptions.map((rx, i) => (
-                <Card key={i}><CardContent className="p-6"><div className="flex justify-between items-start"><div><h3 className="font-semibold text-lg">{rx.medication}</h3><p className="text-sm text-muted-foreground">{rx.dosage}</p><p className="text-xs text-muted-foreground mt-1">Prescribed: {rx.prescribed}</p></div><Badge className="bg-green-100 text-green-700">{rx.status}</Badge></div></CardContent></Card>
+                <Card key={i}><CardContent className="p-6"><div className="flex justify-between items-start"><div><h3 className="font-semibold text-lg">{rx.medication}</h3><p className="text-sm text-muted-foreground">{rx.dosage}</p><p className="text-xs text-muted-foreground mt-1">Prescribed: {rx.prescribed}</p></div><Badge className="bg-blue-100 text-blue-700">{rx.status}</Badge></div></CardContent></Card>
               ))}
             </div>
           </TabsContent>
@@ -173,7 +173,7 @@ function PatientDetailsContent({ params }: { params: { id: string } }) {
           <TabsContent value="labs">
             <div className="space-y-4">
               {patient.labResults.map((lab, i) => (
-                <Card key={i}><CardContent className="p-6"><div className="flex justify-between items-start"><div><h3 className="font-semibold">{lab.test}</h3><p className="text-2xl font-bold mt-2">{lab.value}</p><p className="text-xs text-muted-foreground mt-1">{lab.date}</p></div><Badge className="bg-green-100 text-green-700">{lab.status}</Badge></div></CardContent></Card>
+                <Card key={i}><CardContent className="p-6"><div className="flex justify-between items-start"><div><h3 className="font-semibold">{lab.test}</h3><p className="text-2xl font-bold mt-2">{lab.value}</p><p className="text-xs text-muted-foreground mt-1">{lab.date}</p></div><Badge className="bg-blue-100 text-blue-700">{lab.status}</Badge></div></CardContent></Card>
               ))}
             </div>
           </TabsContent>
@@ -309,7 +309,7 @@ function PatientDetailsContent({ params }: { params: { id: string } }) {
                 <Textarea placeholder="Additional observations..." />
               </div>
               <Button
-                className="w-full bg-green-600 hover:bg-green-700"
+                className="w-full bg-blue-600 hover:bg-blue-700"
                 onClick={() => {
                   setVitalsDialogOpen(false);
                 }}

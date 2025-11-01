@@ -82,7 +82,7 @@ function PrescriptionsContent() {
                       <p className="text-sm"><span className="font-medium">Refills:</span> {rx.refills} remaining</p>
                     </div>
                   </div>
-                  <Badge className="bg-green-100 text-green-700 border-green-300">{rx.status}</Badge>
+                  <Badge className="bg-blue-100 text-blue-700 border-blue-300">{rx.status}</Badge>
                 </div>
               </CardContent>
             </Card>

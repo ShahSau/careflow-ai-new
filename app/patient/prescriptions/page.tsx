@@ -140,7 +140,7 @@ function PatientPrescriptionsPageContent() {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'active':
-        return <CheckCircle2 className="h-5 w-5 text-green-600" />;
+        return <CheckCircle2 className="h-5 w-5 text-blue-600" />;
       case 'expiring':
         return <AlertCircle className="h-5 w-5 text-yellow-600" />;
       case 'expired':
@@ -153,7 +153,7 @@ function PatientPrescriptionsPageContent() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active':
-        return 'bg-green-50 text-green-700 border-green-300';
+        return 'bg-blue-50 text-blue-700 border-blue-300';
       case 'expiring':
         return 'bg-yellow-50 text-yellow-700 border-yellow-300';
       case 'expired':
@@ -169,7 +169,7 @@ function PatientPrescriptionsPageContent() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center gap-2">
-              <Hospital className="h-8 w-8 text-green-500" />
+              <Hospital className="h-8 w-8 text-blue-500" />
               <span className="text-2xl font-bold">MediCare</span>
             </Link>
             <div className="flex items-center gap-4">
@@ -225,15 +225,15 @@ function PatientPrescriptionsPageContent() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <Card className="border-2 border-green-500 bg-green-50 dark:bg-green-950">
+            <Card className="border-2 border-blue-500 bg-blue-50 dark:bg-blue-950">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 rounded-lg bg-green-100 dark:bg-green-900">
-                    <CheckCircle2 className="h-6 w-6 text-green-600" />
+                  <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900">
+                    <CheckCircle2 className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Active</p>
-                    <p className="text-3xl font-bold text-green-700">
+                    <p className="text-3xl font-bold text-blue-700">
                       {prescriptions.filter(p => p.status === 'active').length}
                     </p>
                   </div>
@@ -298,8 +298,8 @@ function PatientPrescriptionsPageContent() {
                   <CardContent className="p-6">
                     <div className="flex flex-col lg:flex-row gap-6">
                       <div className="flex items-start gap-4 flex-1">
-                        <div className="p-4 rounded-xl bg-green-100 dark:bg-green-900">
-                          <Pill className="h-8 w-8 text-green-600" />
+                        <div className="p-4 rounded-xl bg-blue-100 dark:bg-blue-900">
+                          <Pill className="h-8 w-8 text-blue-600" />
                         </div>
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-3">
@@ -320,19 +320,19 @@ function PatientPrescriptionsPageContent() {
 
                           <div className="grid md:grid-cols-2 gap-3 mb-4">
                             <div className="flex items-center gap-2 text-sm">
-                              <Clock className="h-4 w-4 text-green-600" />
+                              <Clock className="h-4 w-4 text-blue-600" />
                               <span className="font-medium">{prescription.dosage}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm">
-                              <Calendar className="h-4 w-4 text-green-600" />
+                              <Calendar className="h-4 w-4 text-blue-600" />
                               <span className="text-muted-foreground">Prescribed: {prescription.prescribedDate}</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm">
-                              <CheckCircle2 className="h-4 w-4 text-green-600" />
+                              <CheckCircle2 className="h-4 w-4 text-blue-600" />
                               <span className="text-muted-foreground">Refills: {prescription.refills} remaining</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm">
-                              <Calendar className="h-4 w-4 text-green-600" />
+                              <Calendar className="h-4 w-4 text-blue-600" />
                               <span className="text-muted-foreground">Expires: {prescription.expiryDate}</span>
                             </div>
                           </div>

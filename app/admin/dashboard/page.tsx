@@ -39,7 +39,7 @@ function AdminDashboardContent() {
 
   const stats = [
     { label: 'Total Patients', value: '2,847', change: '+12.5%', trend: 'up', icon: Users, color: 'text-blue-600', bg: 'bg-blue-50' },
-    { label: 'Active Doctors', value: '156', change: '+3.2%', trend: 'up', icon: Stethoscope, color: 'text-green-600', bg: 'bg-green-50' },
+    { label: 'Active Doctors', value: '156', change: '+3.2%', trend: 'up', icon: Stethoscope, color: 'text-blue-600', bg: 'bg-blue-50' },
     { label: 'Appointments Today', value: '89', change: '-5.1%', trend: 'down', icon: Calendar, color: 'text-purple-600', bg: 'bg-purple-50' },
     { label: 'Revenue (MTD)', value: '$284,500', change: '+18.3%', trend: 'up', icon: DollarSign, color: 'text-emerald-600', bg: 'bg-emerald-50' },
   ];
@@ -60,7 +60,7 @@ function AdminDashboardContent() {
 
   const managementCards = [
     { title: 'Patient Management', desc: 'View, edit, and search patients', icon: Users, href: '/admin/patients', color: 'bg-blue-600' },
-    { title: 'Doctor Management', desc: 'Manage doctor profiles and schedules', icon: Stethoscope, href: '/admin/doctors', color: 'bg-green-600' },
+    { title: 'Doctor Management', desc: 'Manage doctor profiles and schedules', icon: Stethoscope, href: '/admin/doctors', color: 'bg-blue-600' },
     { title: 'Appointments', desc: 'View and reschedule appointments', icon: Calendar, href: '/admin/appointments', color: 'bg-purple-600' },
     { title: 'Departments', desc: 'Add and edit departments', icon: Building2, href: '/admin/departments', color: 'bg-indigo-600' },
     { title: 'Staff Management', desc: 'Manage nurses and admin staff', icon: UserPlus, href: '/admin/staff', color: 'bg-pink-600' },
@@ -104,7 +104,7 @@ function AdminDashboardContent() {
                       <div className={`p-3 rounded-xl ${stat.bg}`}>
                         <stat.icon className={`h-6 w-6 ${stat.color}`} />
                       </div>
-                      <Badge variant="outline" className={stat.trend === 'up' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}>
+                      <Badge variant="outline" className={stat.trend === 'up' ? 'bg-blue-50 text-blue-700' : 'bg-red-50 text-red-700'}>
                         {stat.trend === 'up' ? <TrendingUp className="h-3 w-3 mr-1" /> : <TrendingDown className="h-3 w-3 mr-1" />}
                         {stat.change}
                       </Badge>
@@ -191,7 +191,7 @@ function AdminDashboardContent() {
           <div className="grid lg:grid-cols-3 gap-6">
             <Card className="border-2">
               <CardHeader>
-                <CardTitle className="text-green-600 flex items-center gap-2">
+                <CardTitle className="text-blue-600 flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5" />
                   System Status: Healthy
                 </CardTitle>
@@ -200,15 +200,15 @@ function AdminDashboardContent() {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-sm">Server Status</span>
-                    <Badge className="bg-green-100 text-green-700">Online</Badge>
+                    <Badge className="bg-blue-100 text-blue-700">Online</Badge>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm">Database</span>
-                    <Badge className="bg-green-100 text-green-700">Connected</Badge>
+                    <Badge className="bg-blue-100 text-blue-700">Connected</Badge>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm">Backup Status</span>
-                    <Badge className="bg-green-100 text-green-700">Up to date</Badge>
+                    <Badge className="bg-blue-100 text-blue-700">Up to date</Badge>
                   </div>
                 </div>
               </CardContent>
@@ -225,7 +225,7 @@ function AdminDashboardContent() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm">Completed</span>
-                  <span className="font-bold text-green-600">54</span>
+                  <span className="font-bold text-blue-600">54</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm">Pending</span>
